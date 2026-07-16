@@ -59,3 +59,13 @@ This review records the current truth boundary for the README focus areas.
 ## Recommendation
 
 Keep the existing reused runtime approach, but keep the README wording tied to proven behavior. Prefer replacing the generated theme-style preview with a real macOS verification screenshot once available. If a third-party screenshot is used as an interim hero image, treat it as a licensed reference asset, not as local verification evidence.
+
+## A- Static Closeout
+
+- README hero currently uses a generated theme-style preview with explicit wording.
+- README capability claims match the install, start, verify, and restore scripts at the documentation level.
+- Static verification is enforced by `npm run check`.
+- Screenshot wording is enforced by `scripts/check-screenshot-review.mjs` and regression-tested by `scripts/check-screenshot-review.test.mjs`.
+- Support-service placement remains secondary to the skin tool and is not required for runtime features.
+- macOS live validation and screenshot capture remain not executed in this Windows workspace.
+- Final A- screenshot closeout requires either macOS verification evidence or a completed third-party screenshot review record.

@@ -497,3 +497,9 @@ Remaining external input:
 - Enforced expert verification evidence before local macOS runtime screenshot wording can pass.
 - Added the screenshot gate to `npm run check`.
 - Added six dependency-free regression cases for the screenshot gate and included them in `npm run check`.
+
+### 2026-07-16 release-readiness pass
+
+- Added `docs/RELEASE_NOTES_v0.1.0.md` as a release-notes draft for the A- readiness state.
+- Recorded static closeout in `docs/EXPERT_REVIEW.md`.
+- Updated `docs/RELEASE.md` so release notes must track screenshot mode, validation status, commit/tag/archive names, and checksums.
