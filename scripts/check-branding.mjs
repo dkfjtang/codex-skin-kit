@@ -75,6 +75,8 @@ const required = [
   "SPONSORSHIP.md",
   "THIRD_PARTY_NOTICES.md",
   "docs/SCREENSHOT_REVIEW.md",
+  "scripts/check-screenshot-review.mjs",
+  "scripts/check-screenshot-review.test.mjs",
   "assets/brand/ttflows-logo.png",
   "assets/reference-skin/preview.html",
   "assets/reference-skin/assets/signal-garden-source.png",

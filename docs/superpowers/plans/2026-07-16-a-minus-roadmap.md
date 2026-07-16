@@ -488,3 +488,12 @@ Remaining external input:
 - Added `docs/SCREENSHOT_REVIEW.md` as the intake and rejection gate for third-party screenshots.
 - Added the screenshot review document to the static required-file check.
 - Updated expert review and release checklist references so third-party image publication requires a durable review record.
+
+### 2026-07-16 screenshot automation pass
+
+- Added `scripts/check-screenshot-review.mjs`.
+- Enforced matching Chinese and English README screenshot modes.
+- Enforced completed third-party intake fields before community screenshot wording can pass.
+- Enforced expert verification evidence before local macOS runtime screenshot wording can pass.
+- Added the screenshot gate to `npm run check`.
+- Added six dependency-free regression cases for the screenshot gate and included them in `npm run check`.

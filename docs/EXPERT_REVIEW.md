@@ -44,11 +44,14 @@ This review records the current truth boundary for the README focus areas.
 - The Chinese default README now contains an explicit preview image and states that it is generated, not a local macOS runtime capture.
 - `docs/RELEASE.md` requires provenance and permission review before a third-party screenshot can be published.
 - `docs/SCREENSHOT_REVIEW.md` is the required intake and rejection gate before replacing the README hero with a third-party screenshot.
+- `scripts/check-screenshot-review.mjs` enforces that Chinese and English README screenshot wording use the same mode and that the selected mode has matching review evidence.
 - Runtime claims are cross-checked against `install-signal-garden-skin.sh`, `start-signal-garden-skin.sh`, `verify-signal-garden-skin.sh`, `restore-signal-garden-skin.sh`, and `injector.mjs`.
 
 ## Re-Validation
 
 - Required static command: `npm run check`.
+- Required screenshot gate command: `npm run check:screenshot`.
+- Required screenshot gate regression command: `npm run test:screenshot`; it covers generated preview success, bilingual mismatch failure, incomplete third-party review failure, completed third-party review success, missing macOS evidence failure, and verified runtime success.
 - Required residue scan: `rg -n 'old theme signature|money symbol|paw marker' assets README.md README.en.md` should have no matches after translating those labels into the concrete legacy markers under review.
 - Required legacy-palette scan: `scripts/check-branding.mjs` blocks the old warm palette values and old theme wording; expected result is no matches outside the checker itself.
 - macOS install, injection, screenshot, and restore remain explicitly not executed.
