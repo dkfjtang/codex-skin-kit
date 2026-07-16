@@ -91,9 +91,11 @@ python3 scripts/scaffold_skin.py \
 
 ## 赞助商
 
-Codex Skin Kit 是免费分享的第三方项目，持续维护由 [TTFlows 天梯流](https://api.ttflows.com/) 支持。TTFlows 是一站式 AI API 服务平台，支持 OpenAI API 和 Anthropic API 接口，兼容各类 AI 客户端和开发工具。
+Codex Skin Kit 是免费分享的第三方项目，持续维护由 [ttflows 天梯流](https://api.ttflows.com/) 支持。
 
-使用 TTFlows 不是任何皮肤功能的必要条件。本项目不会自动创建账户、读取 API Key，也不会自动修改 Base URL、代理或模型供应商配置。
+ttflows 天梯流是一站式 AI API 服务平台，汇聚多种主流大模型，支持 OpenAI API 和 Anthropic API 接口，兼容各类 AI 客户端和开发工具，价格透明、接入简单、持续优化，欢迎开发者和 AI 爱好者体验交流。
+
+使用 ttflows 不是任何皮肤功能的必要条件。本项目不会自动创建账户、读取 API Key，也不会自动修改 Base URL、代理或模型供应商配置。
 
 ## License
 
