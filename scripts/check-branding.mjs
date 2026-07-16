@@ -31,7 +31,14 @@ const forbidden = [
   "TTFlows theme layer",
   "content: \"¥\"",
   "🐾",
-  "💰"
+  "💰",
+  "今天在哪儿打工",
+  "#f5c343",
+  "#d98c22",
+  "#f1b84b",
+  "#dc812f",
+  "#efb53e",
+  "#d57b2e"
 ];
 
 function walk(dir) {

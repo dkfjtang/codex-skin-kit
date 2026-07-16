@@ -16,6 +16,7 @@ This review records the current truth boundary for the README focus areas.
 - `Signal Garden` is implemented in `assets/reference-skin/assets/signal-garden-skin.css` and injected by `assets/reference-skin/assets/renderer-inject.js`.
 - The README image is currently a theme-style preview generated from the theme direction, not a macOS live runtime screenshot.
 - Legacy money/cat presentation markers are prohibited by `scripts/check-branding.mjs`; the injected chrome now uses Signal Garden/local visual-layer wording.
+- The base Signal Garden CSS now uses the teal signal-grid palette directly instead of relying on old warm-color rules followed by later override rules.
 
 ## Verification Review
 
@@ -48,6 +49,7 @@ This review records the current truth boundary for the README focus areas.
 
 - Required static command: `npm run check`.
 - Required residue scan: `rg -n 'old theme signature|money symbol|paw marker' assets README.md README.en.md` should have no matches after translating those labels into the concrete legacy markers under review.
+- Required legacy-palette scan: `scripts/check-branding.mjs` blocks the old warm palette values and old theme wording; expected result is no matches outside the checker itself.
 - macOS install, injection, screenshot, and restore remain explicitly not executed.
 
 ## Recommendation

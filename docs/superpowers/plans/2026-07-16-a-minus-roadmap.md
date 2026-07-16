@@ -470,6 +470,13 @@ git commit -m "docs: close a-minus readiness review"
 - Updated release checklist to require third-party screenshot provenance and permission review before publication.
 - Verified static checks with `npm run check` in the Windows workspace.
 
+### 2026-07-16 CSS truth pass
+
+- Reworked the base Signal Garden CSS away from the old warm/gold visual layer.
+- Kept the theme direction aligned with the teal signal-grid preview and runtime copy.
+- Added checks for the old warm palette values and old Chinese theme wording.
+- Verified the legacy-palette scan and `npm run check` in the Windows workspace.
+
 Remaining external input:
 
 - A third-party screenshot file.
