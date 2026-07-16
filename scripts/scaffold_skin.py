@@ -161,7 +161,7 @@ def main() -> None:
         ("signal_garden", lower),
         ("SignalGarden", camel),
         ("signal-garden", key),
-        ("TTFlows theme layer", f"{args.name} theme layer"),
+        ("Local visual layer", f"{args.name} visual layer"),
         ("Local theme active", "Theme active"),
         ("9335", str(args.port)),
     ]

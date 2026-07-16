@@ -27,7 +27,11 @@ const forbidden = [
   "Fei-Away",
   "MeridianAI",
   "passion8",
-  "legacy theme"
+  "legacy theme",
+  "TTFlows theme layer",
+  "content: \"¥\"",
+  "🐾",
+  "💰"
 ];
 
 function walk(dir) {

@@ -59,7 +59,7 @@
       chrome.setAttribute("aria-hidden", "true");
       chrome.innerHTML = `
         <div class="signal-garden-brand"><span class="signal-garden-note">◇</span><span><b>Signal Garden</b><small>FLOW · CODE · LOCAL</small></span></div>
-        <div class="signal-garden-signature">TTFlows theme layer</div>
+        <div class="signal-garden-signature">Local visual layer</div>
         <div class="signal-garden-sparkles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="signal-garden-ribbon"><span>◆</span> Local theme active <span>◆</span></div>
         <div class="signal-garden-polaroid"></div>`;

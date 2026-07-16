@@ -458,3 +458,20 @@ git commit -m "docs: close a-minus readiness review"
 ## 执行建议
 
 优先执行 Task 1、Task 2、Task 5 中的静态部分。没有 macOS 环境时，先执行 Task 3B，再执行 Task 4 的第三方截图分支。不要在没有自有实机验证前把 README 主图标成“由本仓库验证脚本生成的真实运行截图”。
+
+## Implementation Progress
+
+### 2026-07-16 static pass
+
+- Completed the Chinese README preview section with explicit generated-preview wording.
+- Removed legacy money/cat presentation markers from the injected Signal Garden chrome.
+- Added branding checks for the old theme signature and symbol residues.
+- Updated expert review notes with implementation, verification, operations, cross-check, and re-validation records.
+- Updated release checklist to require third-party screenshot provenance and permission review before publication.
+- Verified static checks with `npm run check` in the Windows workspace.
+
+Remaining external input:
+
+- A third-party screenshot file.
+- The screenshot source and public reuse permission.
+- Confirmation that visible content is non-sensitive and acceptable for a public README.

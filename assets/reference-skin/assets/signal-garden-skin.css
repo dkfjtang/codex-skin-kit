@@ -67,9 +67,9 @@ html.codex-skin-kit-signal-garden aside.app-shell-left-panel button[aria-label^=
 }
 
 html.codex-skin-kit-signal-garden aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
-  content: "🐾";
+  content: "·";
   margin-left: 2px;
-  color: #7f9165;
+  color: var(--signal-garden-teal);
 }
 
 html.codex-skin-kit-signal-garden aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
@@ -139,7 +139,7 @@ html.codex-skin-kit-signal-garden main.main-surface > header.app-header-tint {
 
 .signal-garden-sparkles { position: absolute; inset: 48px 0 0; opacity: .76; overflow: hidden; }
 .signal-garden-sparkles i { position: absolute; top: -18px; width: 13px; height: 13px; border: 2px solid #a86820; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff2a5 0 12%, #f5c343 35%, #d98c22 100%); box-shadow: 0 3px 8px rgba(112,71,20,.24); animation: signalGardenPulse 4.8s linear infinite; }
-.signal-garden-sparkles i::before { content: "¥"; position: absolute; inset: -2px; display: grid; place-items: center; color: #9b5d1d; font: 700 8px/1 system-ui; }
+.signal-garden-sparkles i::before { content: ""; position: absolute; inset: -2px; display: grid; place-items: center; color: var(--signal-garden-teal); font: 700 8px/1 system-ui; }
 .signal-garden-sparkles i:nth-child(1) { left: 7%; animation-delay: -1.3s; }
 .signal-garden-sparkles i:nth-child(2) { left: 25%; animation-delay: -3.8s; animation-duration: 5.6s; transform: scale(.7); }
 .signal-garden-sparkles i:nth-child(3) { left: 52%; animation-delay: -2.2s; animation-duration: 6.2s; }
@@ -164,7 +164,7 @@ html.codex-skin-kit-signal-garden main.main-surface > header.app-header-tint {
   animation: signalGardenFloat 3.2s ease-in-out infinite;
 }
 #codex-skin-kit-signal-garden-chrome.signal-garden-home-shell .signal-garden-polaroid { display: block; }
-.signal-garden-polaroid::before { content: "💰"; position: absolute; left: -18px; top: -19px; font-size: 29px; filter: drop-shadow(0 3px 4px rgba(120,77,22,.22)); }
+.signal-garden-polaroid::before { content: ""; position: absolute; left: -18px; top: -19px; font-size: 29px; filter: drop-shadow(0 3px 4px rgba(21,84,78,.18)); }
 
 .signal-garden-ribbon {
   position: absolute;
@@ -384,7 +384,7 @@ html.codex-skin-kit-signal-garden .composer-surface-chrome {
 }
 
 html.codex-skin-kit-signal-garden .composer-surface-chrome::before {
-  content: "🐾";
+  content: "";
   position: absolute;
   left: -13px;
   top: -13px;
@@ -395,8 +395,8 @@ html.codex-skin-kit-signal-garden .composer-surface-chrome::before {
   place-items: center;
   border-radius: 50%;
   color: white;
-  background: linear-gradient(145deg, #f6bf4c, #df8231);
-  box-shadow: 0 4px 12px rgba(123,78,22,.20);
+  background: linear-gradient(145deg, #22aaa1, #0f938a);
+  box-shadow: 0 4px 12px rgba(21,84,78,.18);
   font-size: 13px;
 }
 
@@ -409,12 +409,12 @@ html.codex-skin-kit-signal-garden .composer-surface-chrome::before {
 }
 
 .signal-garden-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector)::before {
-  content: "🐾  今天在哪儿打工？";
+  content: "Signal Garden workspace";
   position: absolute;
   left: 13px;
   top: 6px;
   z-index: 2;
-  color: #8b5a24;
+  color: #31514d;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .04em;
