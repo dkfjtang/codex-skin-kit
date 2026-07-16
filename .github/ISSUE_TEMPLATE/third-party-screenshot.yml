@@ -1,0 +1,82 @@
+name: Third-party screenshot review
+description: Submit a community-provided Signal Garden runtime reference screenshot for README review.
+title: "Screenshot review: "
+labels:
+  - screenshot-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only for screenshots that may be used publicly in the README.
+
+        The image must not be described as a screenshot produced by this repository unless it was captured with this repository's macOS verification script. Third-party images can only be described as community-provided runtime reference screenshots.
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where did the screenshot come from? Provide a public URL or describe the private source.
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+      description: Who supplied or published the screenshot?
+      placeholder: "GitHub user / project / maintainer"
+    validations:
+      required: true
+  - type: textarea
+    id: permission
+    attributes:
+      label: Permission and evidence
+      description: Explain why this repository may reuse the screenshot publicly in the README. Link to the license, written approval, or source page.
+      placeholder: "Public license / explicit approval / source page..."
+    validations:
+      required: true
+  - type: textarea
+    id: sensitive-content
+    attributes:
+      label: Sensitive content review
+      description: Confirm the image does not show private conversations, emails, account names, tokens, API keys, billing data, usage data, internal domains, or private project names.
+      placeholder: "No private or sensitive content is visible."
+    validations:
+      required: true
+  - type: textarea
+    id: visual-match
+    attributes:
+      label: Visual match review
+      description: Explain why the screenshot represents behavior this repository can plausibly produce.
+      placeholder: "The screenshot shows Signal Garden applied to the official Codex desktop layout..."
+    validations:
+      required: true
+  - type: dropdown
+    id: edited
+    attributes:
+      label: Was the image cropped or redacted?
+      options:
+        - "No"
+        - "Yes, cropped only"
+        - "Yes, redacted"
+        - "Yes, cropped and redacted"
+    validations:
+      required: true
+  - type: textarea
+    id: edit-notes
+    attributes:
+      label: Crop or redaction notes
+      description: If edited, describe exactly what changed.
+      placeholder: "No edits / cropped window chrome / redacted account name..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I understand this image may only be described as a community-provided runtime reference screenshot unless local macOS verification is completed.
+          required: true
+        - label: I understand this image must not imply that this repository generated or verified it in the current Windows workspace.
+          required: true
+        - label: I confirm the screenshot is suitable for public README use.
+          required: true

@@ -18,6 +18,7 @@ This release positions the repository as a real, reversible local Codex skin too
 - README structure and support-service placement scan.
 - Screenshot review gate and six regression cases for README screenshot wording modes.
 - GitHub Actions static validation workflow for `npm run check`.
+- Third-party screenshot issue template for README hero image intake.
 - A- project evaluation, schedule, and expert-review boundary in `docs/A_MINUS_PROJECT_EVALUATION.md`.
 - A- static audit record in `docs/release/v0.1.0-a-minus-static-audit.md`.
 

@@ -13,6 +13,8 @@ This file is the publication gate for any README hero image that is not generate
 
 Record all items below before replacing `assets/reference-skin/assets/signal-garden-preview.png` with a third-party image.
 
+If the screenshot is submitted through GitHub, use `.github/ISSUE_TEMPLATE/third-party-screenshot.yml` so the source, permission, sensitive-content review, and runtime boundary are captured before maintainer review.
+
 ```md
 ## Third-Party Screenshot Intake
 
