@@ -22,7 +22,8 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 
 ## Verification Review
 
-- Static verification is covered by `npm run check`, including branding scan, Python syntax compilation, JavaScript syntax checks, and `skin.json` parsing.
+- Static verification is covered by `npm run check`, including branding scan, README structure scan, screenshot gate checks, Python syntax compilation, JavaScript syntax checks, and `skin.json` parsing.
+- Remote static verification is covered by `.github/workflows/check.yml`, which runs `npm run check` on `main` pushes and pull requests.
 - Runtime verification is designed for macOS with the official Codex desktop app and should use:
 
 ```zsh
@@ -67,6 +68,7 @@ Keep the existing reused runtime approach, but keep the README wording tied to p
 - README hero currently uses a generated theme-style preview with explicit wording.
 - README capability claims match the install, start, verify, and restore scripts at the documentation level.
 - Static verification is enforced by `npm run check`.
+- Remote static verification is enforced by the `check` GitHub Actions workflow.
 - Screenshot wording is enforced by `scripts/check-screenshot-review.mjs` and regression-tested by `scripts/check-screenshot-review.test.mjs`.
 - Support-service placement remains secondary to the skin tool and is not required for runtime features.
 - macOS live validation and screenshot capture remain not executed in this Windows workspace.

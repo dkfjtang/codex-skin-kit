@@ -68,6 +68,7 @@ for (const file of walk(root)) {
 
 const required = [
   "README.md",
+  ".github/workflows/check.yml",
   "LICENSE",
   "NOTICE.md",
   "PRIVACY.md",
