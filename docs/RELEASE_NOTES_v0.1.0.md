@@ -19,6 +19,7 @@ This release positions the repository as a real, reversible local Codex skin too
 - Screenshot review gate and six regression cases for README screenshot wording modes.
 - GitHub Actions static validation workflow for `npm run check`.
 - A- project evaluation, schedule, and expert-review boundary in `docs/A_MINUS_PROJECT_EVALUATION.md`.
+- A- static audit record in `docs/release/v0.1.0-a-minus-static-audit.md`.
 
 ## Verification
 
@@ -32,8 +33,16 @@ Current verified output in the Windows workspace:
 
 ```text
 Branding and compliance scan passed.
+README structure and support-service scan passed.
 Screenshot review gate passed (generated).
 Screenshot review gate tests passed (6 cases).
+```
+
+Hosted verification:
+
+```text
+check #29489214569: success
+headSha: 5dc4672dddb96a7172e245752fff7f20c6856344
 ```
 
 ## Screenshot Status

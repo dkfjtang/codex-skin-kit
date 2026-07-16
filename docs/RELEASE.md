@@ -13,6 +13,10 @@ Before publishing a Codex Skin Kit release:
 9. Update `docs/RELEASE_NOTES_v0.1.0.md` with the final screenshot mode, validation status, commit, tag, archive names, and checksum records.
 10. Publish archives with SHA-256 checksums.
 
+## Current Audit Record
+
+The current A- static audit record is `docs/release/v0.1.0-a-minus-static-audit.md`.
+
 ## Source Control Gate
 
 Before tagging or publishing:
