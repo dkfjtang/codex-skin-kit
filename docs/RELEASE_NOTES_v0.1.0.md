@@ -38,7 +38,7 @@ Screenshot review gate passed (generated).
 Screenshot review gate tests passed (6 cases).
 ```
 
-Hosted verification:
+Hosted verification must pass for the exact release commit before publication. Recent hosted baseline evidence:
 
 ```text
 check #29489214569: success
