@@ -4,9 +4,9 @@
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-Give Codex desktop a face that feels alive.
+Make Codex desktop easier on the eyes and closer to your own workspace.
 
-Start from one image, and tune the first glance of Codex into your own rhythm.
+An installable, verifiable, and restorable local skin toolkit. Start with a licensed image and give your everyday coding surface a stable, reversible visual state.
 
 External theme / skin toolkit · local CDP injection · no official app package changes. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
 
