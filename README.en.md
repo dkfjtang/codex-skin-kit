@@ -14,6 +14,8 @@ External theme / skin toolkit · local CDP injection · no official app package 
 
 Signal Garden is not a wallpaper cover. It adds a lightweight, restorable visual layer while keeping the native Codex layout and interactions intact.
 
+The preview is generated from the current Signal Garden theme style. The actual UI may vary slightly by Codex version, window size, and system fonts.
+
 ## What It Does
 
 - Installs a runnable Codex desktop skin

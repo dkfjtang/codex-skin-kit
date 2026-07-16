@@ -20,6 +20,10 @@ const forbidden = [
   "SALARY_CAT",
   "monthly salary cat",
   "Monthly Salary Cat",
+  "工资",
+  "月薪",
+  "到账",
+  "喵",
   "Fei-Away",
   "MeridianAI",
   "passion8",
@@ -59,6 +63,7 @@ const required = [
   "SECURITY.md",
   "SPONSORSHIP.md",
   "THIRD_PARTY_NOTICES.md",
+  "assets/reference-skin/preview.html",
   "assets/reference-skin/assets/signal-garden-source.png",
   "assets/reference-skin/assets/signal-garden-preview.png",
   "assets/reference-skin/assets/signal-garden-hero.gif"

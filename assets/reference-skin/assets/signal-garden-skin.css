@@ -1,12 +1,10 @@
 :root.codex-skin-kit-signal-garden {
   color-scheme: light !important;
-  --signal-garden-ink: #493620;
-  --signal-garden-cocoa: #6f4a25;
-  --signal-garden-apricot: #e7903e;
-  --signal-garden-gold: #f4bd3f;
-  --signal-garden-cream: #fff8df;
-  --signal-garden-sage: #7c8b62;
-  --signal-garden-line: rgba(185, 126, 49, .38);
+  --signal-garden-ink: #132321;
+  --signal-garden-muted: #5f7470;
+  --signal-garden-teal: #0f938a;
+  --signal-garden-teal-soft: #d9f0ec;
+  --signal-garden-line: rgba(15, 147, 138, .22);
 }
 
 html.codex-skin-kit-signal-garden body {
@@ -284,7 +282,7 @@ html.codex-skin-kit-signal-garden .signal-garden-home {
 }
 
 .signal-garden-home [data-feature="game-source"]::after {
-  content: "代码会写完，工资也会到账的喵 🐾";
+  content: "Local visual layer active. Native Codex layout preserved.";
   display: block;
   margin-top: 13px;
   color: rgba(255,249,224,.95);
@@ -472,4 +470,194 @@ html.codex-skin-kit-signal-garden [data-message-author-role] {
   .signal-garden-brand .signal-garden-note,
   .signal-garden-polaroid,
   .signal-garden-ribbon { animation: none !important; }
+}
+
+/* Signal Garden v2: README preview and runtime share this achievable teal theme. */
+:root.codex-skin-kit-signal-garden {
+  --signal-garden-ink: #132321;
+  --signal-garden-muted: #5f7470;
+  --signal-garden-teal: #0f938a;
+  --signal-garden-teal-soft: #d9f0ec;
+  --signal-garden-line: rgba(15, 147, 138, .22);
+}
+
+html.codex-skin-kit-signal-garden body {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(15, 147, 138, .16), transparent 30%),
+    radial-gradient(circle at 16% 8%, rgba(217, 164, 61, .12), transparent 24%),
+    linear-gradient(135deg, #f7fcfb 0%, #e9f7f4 46%, #f8fbf4 100%) !important;
+  color: var(--signal-garden-ink) !important;
+}
+
+html.codex-skin-kit-signal-garden body::before {
+  opacity: .42 !important;
+  background-image:
+    linear-gradient(var(--signal-garden-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--signal-garden-line) 1px, transparent 1px) !important;
+  background-size: 36px 36px !important;
+}
+
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel {
+  background: linear-gradient(180deg, rgba(248,253,252,.98), rgba(233,247,244,.96)) !important;
+  border-color: rgba(15, 147, 138, .20) !important;
+  box-shadow: 10px 0 28px rgba(21, 84, 78, .08), inset -1px 0 rgba(255,255,255,.82) !important;
+  color: var(--signal-garden-ink) !important;
+}
+
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel button {
+  color: #243a37 !important;
+}
+
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel button:hover,
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel [aria-current="page"] {
+  background: linear-gradient(90deg, rgba(217,240,236,.92), rgba(244,251,250,.82)) !important;
+  border-color: rgba(15, 147, 138, .24) !important;
+  box-shadow: 0 4px 16px rgba(21, 84, 78, .08) !important;
+}
+
+html.codex-skin-kit-signal-garden main.main-surface {
+  background:
+    radial-gradient(circle at 86% 15%, rgba(15, 147, 138, .14), transparent 28%),
+    linear-gradient(180deg, rgba(251,254,253,.98), rgba(239,249,247,.96)) !important;
+  border-color: rgba(15, 147, 138, .20) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.95), -8px 0 28px rgba(21, 84, 78, .07) !important;
+}
+
+html.codex-skin-kit-signal-garden main.main-surface > header.app-header-tint {
+  background: linear-gradient(90deg, rgba(248,253,252,.96), rgba(217,240,236,.86), rgba(248,253,252,.78)) !important;
+  border-bottom-color: rgba(15, 147, 138, .18) !important;
+}
+
+.signal-garden-brand {
+  color: #26423e !important;
+}
+
+.signal-garden-brand .signal-garden-note {
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50% !important;
+  color: transparent !important;
+  background: var(--signal-garden-teal) !important;
+  box-shadow: 0 0 0 7px rgba(15,147,138,.18) !important;
+}
+
+.signal-garden-brand small,
+.signal-garden-signature {
+  color: var(--signal-garden-muted) !important;
+}
+
+.signal-garden-sparkles i {
+  border: 0 !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: var(--signal-garden-teal) !important;
+  box-shadow: 0 0 0 6px rgba(15,147,138,.14), 0 6px 18px rgba(15,147,138,.20) !important;
+}
+
+.signal-garden-sparkles i::before {
+  content: "" !important;
+}
+
+.signal-garden-polaroid {
+  border-color: rgba(251,254,253,.96) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 9px 20px rgba(21,84,78,.14), 0 0 0 1px rgba(15,147,138,.18) !important;
+}
+
+.signal-garden-polaroid::before {
+  content: "" !important;
+}
+
+.signal-garden-ribbon {
+  border-color: rgba(15,147,138,.20) !important;
+  background: rgba(248,253,252,.78) !important;
+  color: #31514d !important;
+}
+
+.signal-garden-home > div:first-child > div:first-child > div:first-child {
+  border-color: rgba(15,147,138,.30) !important;
+  background-image:
+    linear-gradient(90deg, rgba(248,253,252,.92), rgba(248,253,252,.36)),
+    var(--signal-garden-art) !important;
+  box-shadow: 0 14px 34px rgba(21,84,78,.12), inset 0 0 0 4px rgba(255,255,255,.22) !important;
+}
+
+.signal-garden-home > div:first-child > div:first-child > div:first-child::before {
+  width: 55% !important;
+  background: linear-gradient(90deg, rgba(248,253,252,.96), rgba(248,253,252,.78), transparent) !important;
+}
+
+.signal-garden-home [data-feature="game-source"] {
+  color: #132321 !important;
+  text-shadow: 0 1px 0 white !important;
+}
+
+.signal-garden-home [data-feature="game-source"]::after {
+  content: "Local visual layer active. Native Codex layout preserved." !important;
+  color: var(--signal-garden-muted) !important;
+}
+
+.signal-garden-home [data-feature="game-source"] button {
+  border-color: rgba(15,147,138,.26) !important;
+  background: rgba(217,240,236,.58) !important;
+  color: #0d716b !important;
+}
+
+.signal-garden-home [data-feature="game-source"] button::before {
+  content: "project " !important;
+}
+
+.signal-garden-home .group\/home-suggestions button {
+  border-color: rgba(15,147,138,.24) !important;
+  background:
+    radial-gradient(circle at 50% 25%, rgba(255,255,255,.96), transparent 34%),
+    linear-gradient(145deg, rgba(248,253,252,.98), rgba(232,247,244,.95)) !important;
+  color: #243a37 !important;
+  box-shadow: 0 8px 18px rgba(21,84,78,.08), inset 0 0 0 3px rgba(255,255,255,.46) !important;
+}
+
+.signal-garden-home .group\/home-suggestions button:hover {
+  box-shadow: 0 13px 26px rgba(21,84,78,.12), 0 0 0 2px rgba(15,147,138,.14) !important;
+}
+
+.signal-garden-home .group\/home-suggestions button > span:first-child > span:first-child,
+html.codex-skin-kit-signal-garden button[class~="bg-token-foreground"] {
+  background: linear-gradient(145deg, #22aaa1, #0f938a) !important;
+  box-shadow: 0 0 0 7px rgba(15,147,138,.16), 0 5px 12px rgba(21,84,78,.16) !important;
+}
+
+html.codex-skin-kit-signal-garden .composer-surface-chrome {
+  border-color: rgba(15,147,138,.24) !important;
+  background:
+    radial-gradient(circle at 88% 22%, rgba(255,255,255,.92), transparent 24%),
+    linear-gradient(145deg, rgba(251,254,253,.98), rgba(230,246,243,.94)) !important;
+  box-shadow: 0 10px 25px rgba(21,84,78,.10), inset 0 0 0 4px rgba(255,255,255,.45) !important;
+}
+
+html.codex-skin-kit-signal-garden .composer-surface-chrome::before {
+  content: "" !important;
+  background: var(--signal-garden-teal) !important;
+  box-shadow: 0 0 0 7px rgba(15,147,138,.14), 0 4px 12px rgba(21,84,78,.14) !important;
+}
+
+.signal-garden-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector) {
+  border-color: rgba(15,147,138,.20) !important;
+  background: linear-gradient(180deg, rgba(248,253,252,.95), rgba(226,244,241,.86)) !important;
+}
+
+.signal-garden-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector)::before {
+  content: "Signal Garden workspace" !important;
+  color: #31514d !important;
+}
+
+.signal-garden-home .group\/project-selector > button {
+  border-color: rgba(15,147,138,.22) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(232,247,244,.86)) !important;
+  color: #31514d !important;
+}
+
+html.codex-skin-kit-signal-garden .ProseMirror {
+  color: #243a37 !important;
+  caret-color: var(--signal-garden-teal) !important;
 }
