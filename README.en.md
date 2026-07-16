@@ -91,9 +91,9 @@ Use only images that you own or assets that are explicitly licensed for redistri
 - Promotion pages are not opened automatically, and API relay configuration is not written automatically
 - If adaptation fails, the original app should remain unchanged and cleanup should be available through the restore script
 
-## Sponsors
+## Support Service
 
-Codex Skin Kit is a free third-party project. Its ongoing maintenance is supported by [ttflows 天梯流](https://api.ttflows.com/).
+Codex Skin Kit is a free third-party project. Its ongoing maintenance and experience testing are supported by [ttflows 天梯流](https://api.ttflows.com/).
 
 ttflows 天梯流 is a one-stop AI API service platform that brings together multiple mainstream large models, supports OpenAI API and Anthropic API interfaces, works with many AI clients and developer tools, keeps pricing transparent, makes integration simple, and continues to improve for developers and AI enthusiasts.
 
