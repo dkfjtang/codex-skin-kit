@@ -1,8 +1,8 @@
 ((cssText, artDataUrl, stillDataUrl) => {
-  const STATE_KEY = "__FLOWDECK_SIGNAL_GARDEN_STATE__";
-  const STYLE_ID = "flowdeck-signal-garden-style";
-  const CHROME_ID = "flowdeck-signal-garden-chrome";
-  window.__FLOWDECK_SIGNAL_GARDEN_DISABLED__ = false;
+  const STATE_KEY = "__CODEX_SKIN_KIT_SIGNAL_GARDEN_STATE__";
+  const STYLE_ID = "codex-skin-kit-signal-garden-style";
+  const CHROME_ID = "codex-skin-kit-signal-garden-chrome";
+  window.__CODEX_SKIN_KIT_SIGNAL_GARDEN_DISABLED__ = false;
 
   const previous = window[STATE_KEY];
   if (previous?.observer) previous.observer.disconnect();
@@ -25,10 +25,10 @@
   }
 
   const ensure = () => {
-    if (window.__FLOWDECK_SIGNAL_GARDEN_DISABLED__) return;
+    if (window.__CODEX_SKIN_KIT_SIGNAL_GARDEN_DISABLED__) return;
     const root = document.documentElement;
     if (!root) return;
-    root.classList.add("flowdeck-signal-garden");
+    root.classList.add("codex-skin-kit-signal-garden");
     root.style.setProperty("--signal-garden-art", `url("${artUrl}")`);
 
     let style = document.getElementById(STYLE_ID);
@@ -74,8 +74,8 @@
   };
 
   const cleanup = () => {
-    window.__FLOWDECK_SIGNAL_GARDEN_DISABLED__ = true;
-    document.documentElement?.classList.remove("flowdeck-signal-garden");
+    window.__CODEX_SKIN_KIT_SIGNAL_GARDEN_DISABLED__ = true;
+    document.documentElement?.classList.remove("codex-skin-kit-signal-garden");
     document.documentElement?.style.removeProperty("--signal-garden-art");
     document.querySelectorAll(".signal-garden-home").forEach((node) => node.classList.remove("signal-garden-home"));
     document.querySelectorAll(".signal-garden-home-shell").forEach((node) => node.classList.remove("signal-garden-home-shell"));

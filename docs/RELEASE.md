@@ -1,6 +1,6 @@
 # Release Checklist
 
-Before publishing a FlowDeck release:
+Before publishing a Codex Skin Kit release:
 
 1. Run `npm run check`.
 2. Confirm `README.md`, `NOTICE.md`, `PRIVACY.md`, `SPONSORSHIP.md`, and `THIRD_PARTY_NOTICES.md` are included.

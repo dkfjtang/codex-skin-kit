@@ -1,7 +1,7 @@
-﻿{
-    "name":  "@ttflows/flowdeck",
+{
+    "name":  "@dkfjtang/codex-skin-kit",
     "version":  "0.1.0",
-    "description":  "A free third-party desktop theme tool maintained by TTFlows.",
+    "description":  "A free third-party Codex desktop skin toolkit.",
     "type":  "module",
     "license":  "MIT",
     "private":  false,
@@ -12,11 +12,11 @@
     "keywords":  [
                      "desktop-theme",
                      "local-theme",
-                     "flowdeck",
+                     "codex-skin-kit",
                      "ttflows"
                  ],
     "repository":  {
                        "type":  "git",
-                       "url":  "git+https://github.com/dkfjtang/flowdeck.git"
+                       "url":  "git+https://github.com/dkfjtang/codex-skin-kit.git"
                    }
 }

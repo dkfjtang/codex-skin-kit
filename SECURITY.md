@@ -1,6 +1,6 @@
 # Security
 
-FlowDeck applies themes through a local Chromium DevTools Protocol endpoint.
+Codex Skin Kit applies themes through a local Chromium DevTools Protocol endpoint.
 
 ## Boundaries
 

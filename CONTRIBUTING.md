@@ -1,6 +1,6 @@
 # Contributing
 
-FlowDeck accepts contributions that can be safely redistributed.
+Codex Skin Kit accepts contributions that can be safely redistributed.
 
 Accepted:
 

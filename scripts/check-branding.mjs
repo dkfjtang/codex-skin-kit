@@ -11,7 +11,6 @@ const allowed = new Map([
   ["ChatGPT", new Set(["README.md", "NOTICE.md", "references/runtime-architecture.md", "assets/reference-skin/references/runtime-notes.md", "assets/reference-skin/scripts/lib.sh"])],
   ["Anthropic", new Set(["README.md", "NOTICE.md", "SPONSORSHIP.md"])],
   ["Claude", new Set(["NOTICE.md"])],
-  ["Codex", new Set(["README.md", "NOTICE.md", "SECURITY.md", "SKILL.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "assets/reference-skin/SKILL.md", "assets/reference-skin/README.zh-CN.md", "assets/reference-skin/agents/openai.yaml", "assets/reference-skin/references/runtime-notes.md", "assets/reference-skin/scripts/lib.sh", "assets/reference-skin/scripts/start-signal-garden-skin.sh", "assets/reference-skin/scripts/theme-config.mjs", "assets/reference-skin/scripts/injector.mjs", "assets/reference-skin/scripts/websocket-client.mjs", "references/runtime-architecture.md", "references/qa.md", "references/visual-workflow.md", "scripts/scaffold_skin.py"])],
 ]);
 const forbidden = [
   "codex-skin-builder",

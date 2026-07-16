@@ -4,7 +4,7 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PA
 
 SIGNAL_GARDEN_SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "${(%):-%N}")" && pwd)"
 SIGNAL_GARDEN_SKILL_ROOT="$(dirname "$SIGNAL_GARDEN_SCRIPT_DIR")"
-SIGNAL_GARDEN_STATE_ROOT="${FLOWDECK_SIGNAL_GARDEN_STATE_ROOT:-$HOME/Library/Application Support/FlowDeckSignalGarden}"
+SIGNAL_GARDEN_STATE_ROOT="${CODEX_SKIN_KIT_SIGNAL_GARDEN_STATE_ROOT:-$HOME/Library/Application Support/CodexSkinKitSignalGarden}"
 
 signal_garden_die() {
   print -u2 -- "Signal Garden: $*"
@@ -19,8 +19,8 @@ signal_garden_validate_port() {
 
 signal_garden_find_node() {
   local node_path major
-  if [[ -n "${FLOWDECK_SIGNAL_GARDEN_NODE:-}" && -x "$FLOWDECK_SIGNAL_GARDEN_NODE" ]]; then
-    node_path="$FLOWDECK_SIGNAL_GARDEN_NODE"
+  if [[ -n "${CODEX_SKIN_KIT_SIGNAL_GARDEN_NODE:-}" && -x "$CODEX_SKIN_KIT_SIGNAL_GARDEN_NODE" ]]; then
+    node_path="$CODEX_SKIN_KIT_SIGNAL_GARDEN_NODE"
   else
     node_path="$(command -v node 2>/dev/null || true)"
   fi
@@ -37,7 +37,7 @@ signal_garden_bundle_id() {
 signal_garden_find_app() {
   local candidate
   local -a candidates
-  [[ -n "${FLOWDECK_SIGNAL_GARDEN_APP_PATH:-}" ]] && candidates+=("$FLOWDECK_SIGNAL_GARDEN_APP_PATH")
+  [[ -n "${CODEX_SKIN_KIT_SIGNAL_GARDEN_APP_PATH:-}" ]] && candidates+=("$CODEX_SKIN_KIT_SIGNAL_GARDEN_APP_PATH")
   candidates+=(
     "/Applications/ChatGPT.app"
     "/Applications/Codex.app"

@@ -1,8 +1,8 @@
 # Notices
 
-FlowDeck and the Signal Garden theme are maintained by TTFlows (天梯流).
+Codex Skin Kit and the Signal Garden theme are maintained by TTFlows (天梯流).
 
-FlowDeck is an unofficial third-party customization project. It is not affiliated with, endorsed by, sponsored by, or officially connected with OpenAI, Anthropic, or any other model vendor.
+Codex Skin Kit is an unofficial third-party customization project. It is not affiliated with, endorsed by, sponsored by, or officially connected with OpenAI, Anthropic, or any other model vendor.
 
 OpenAI, Codex, ChatGPT, Anthropic, Claude, and related names and marks are the property of their respective owners. References to third-party product names are made only when reasonably necessary to describe compatibility.
 
@@ -20,13 +20,13 @@ It does not grant rights to:
 
 ## TTFlows Promotion
 
-TTFlows (天梯流) is operated by the FlowDeck maintainer as an independent third-party AI API service platform. References to TTFlows are maintainer advertisements and do not indicate endorsement, authorization, or sponsorship by OpenAI, Anthropic, or other model vendors.
+TTFlows (天梯流) is operated by the Codex Skin Kit maintainer as an independent third-party AI API service platform. References to TTFlows are maintainer advertisements and do not indicate endorsement, authorization, or sponsorship by OpenAI, Anthropic, or other model vendors.
 
-Using TTFlows is not required to install or use FlowDeck. FlowDeck does not automatically create TTFlows accounts, change API keys, replace API endpoints, alter proxy settings, or route model traffic through TTFlows.
+Using TTFlows is not required to install or use Codex Skin Kit. Codex Skin Kit does not automatically create TTFlows accounts, change API keys, replace API endpoints, alter proxy settings, or route model traffic through TTFlows.
 
 ## Runtime
 
-FlowDeck does not redistribute Node.js. Runtime scripts use an available Node.js installation or the executable bundled with the user's official desktop application when supported by the packaged workflow.
+Codex Skin Kit does not redistribute Node.js. Runtime scripts use an available Node.js installation or the executable bundled with the user's official desktop application when supported by the packaged workflow.
 
 ## Security Model
 

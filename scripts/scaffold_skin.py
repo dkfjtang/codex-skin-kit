@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scaffold a new macOS FlowDeck theme from the bundled reference implementation."""
+"""Scaffold a new macOS Codex Skin Kit theme from the bundled reference implementation."""
 
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ def fail(message: str) -> None:
 
 
 def key_from_slug(slug: str) -> str:
-    key = re.sub(r"^flowdeck-", "", slug)
+    key = re.sub(r"^codex-skin-kit-", "", slug)
     key = re.sub(r"-skin$", "", key)
     key = re.sub(r"-theme$", "", key)
     return key or "custom"
@@ -79,14 +79,14 @@ def write_metadata(root: Path, args: argparse.Namespace, key: str) -> None:
         "interface:\n"
         f"  display_name: {json.dumps(args.name, ensure_ascii=False)}\n"
         f"  short_description: {json.dumps(args.description[:64], ensure_ascii=False)}\n"
-        f"  default_prompt: {json.dumps(f'Use ${args.slug} to install, activate, verify, or restore this FlowDeck theme.', ensure_ascii=False)}\n",
+        f"  default_prompt: {json.dumps(f'Use ${args.slug} to install, activate, verify, or restore this Codex Skin Kit theme.', ensure_ascii=False)}\n",
         encoding="utf-8",
     )
 
     (root / "SKILL.md").write_text(
         "---\n"
         f"name: {args.slug}\n"
-        f"description: Install, activate, verify, update, or restore {args.name}, a packaged macOS FlowDeck theme using loopback-only CDP injection without modifying app.asar.\n"
+        f"description: Install, activate, verify, update, or restore {args.name}, a packaged macOS Codex Skin Kit theme using loopback-only CDP injection without modifying app.asar.\n"
         "---\n\n"
         f"# {args.name}\n\n"
         "Use the scripts in this package for installation, activation, verification, and restore. "
@@ -152,10 +152,10 @@ def main() -> None:
     upper = key.replace("-", "_").upper()
     lower = key.replace("-", "_")
     camel = pascal(key)
-    state_dir = f"FlowDeckTheme-{args.slug}"
+    state_dir = f"CodexSkinKitTheme-{args.slug}"
     replacements = [
-        ("flowdeck-signal-garden", args.slug),
-        ("FlowDeckSignalGarden", state_dir),
+        ("codex-skin-kit-signal-garden", args.slug),
+        ("CodexSkinKitSignalGarden", state_dir),
         ("Signal Garden", args.name),
         ("SIGNAL_GARDEN", upper),
         ("signal_garden", lower),

@@ -18,7 +18,7 @@ signal_garden_validate_port "$PORT"
 NODE="$(signal_garden_find_node)"
 /bin/mkdir -p "$SIGNAL_GARDEN_STATE_ROOT"
 
-INSTALL_ROOT="$HOME/.codex/skills/flowdeck-signal-garden"
+INSTALL_ROOT="$HOME/.codex/skills/codex-skin-kit-signal-garden"
 ACTIVE_ROOT="$SIGNAL_GARDEN_SKILL_ROOT"
 if (( ! NO_COPY )) && [[ "$SIGNAL_GARDEN_SKILL_ROOT" != "$INSTALL_ROOT" ]]; then
   /bin/mkdir -p "${INSTALL_ROOT:h}"
@@ -28,14 +28,14 @@ if (( ! NO_COPY )) && [[ "$SIGNAL_GARDEN_SKILL_ROOT" != "$INSTALL_ROOT" ]]; then
 fi
 /bin/chmod +x "$ACTIVE_ROOT"/scripts/*.sh
 
-CONFIG_PATH="${FLOWDECK_SIGNAL_GARDEN_CONFIG_PATH:-$HOME/.codex/config.toml}"
+CONFIG_PATH="${CODEX_SKIN_KIT_SIGNAL_GARDEN_CONFIG_PATH:-$HOME/.codex/config.toml}"
 "$NODE" "$ACTIVE_ROOT/scripts/theme-config.mjs" install "$CONFIG_PATH" "$SIGNAL_GARDEN_STATE_ROOT/config.before-signal-garden-skin.toml"
 
 create_launcher() {
   local name="$1" script_path="$2" extra_arg="$3"
-  local desktop_dir="${FLOWDECK_SIGNAL_GARDEN_DESKTOP_DIR:-$HOME/Desktop}"
+  local desktop_dir="${CODEX_SKIN_KIT_SIGNAL_GARDEN_DESKTOP_DIR:-$HOME/Desktop}"
   local app="$desktop_dir/$name.app"
-  local bundle_id="com.local.flowdeck-signal-garden.${script_path:t:r}"
+  local bundle_id="com.local.codex-skin-kit-signal-garden.${script_path:t:r}"
   /bin/mkdir -p "$app/Contents/MacOS"
   /bin/cat > "$app/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
@@ -55,8 +55,8 @@ PLIST
   /bin/cat > "$app/Contents/MacOS/launcher" <<LAUNCHER
 #!/bin/zsh
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:\${PATH:-}"
-export FLOWDECK_SIGNAL_GARDEN_NODE=${(q)NODE}
-exec $quoted_script --port $PORT $extra_arg >>"\$HOME/Library/Application Support/FlowDeckSignalGarden/desktop-launcher.log" 2>&1
+export CODEX_SKIN_KIT_SIGNAL_GARDEN_NODE=${(q)NODE}
+exec $quoted_script --port $PORT $extra_arg >>"\$HOME/Library/Application Support/CodexSkinKitSignalGarden/desktop-launcher.log" 2>&1
 LAUNCHER
   /bin/chmod +x "$app/Contents/MacOS/launcher"
   /usr/bin/codesign --force --sign - "$app" >/dev/null 2>&1
@@ -64,7 +64,7 @@ LAUNCHER
 }
 
 if (( ! NO_LAUNCHERS )); then
-  /bin/mkdir -p "${FLOWDECK_SIGNAL_GARDEN_DESKTOP_DIR:-$HOME/Desktop}"
+  /bin/mkdir -p "${CODEX_SKIN_KIT_SIGNAL_GARDEN_DESKTOP_DIR:-$HOME/Desktop}"
   create_launcher "Signal Garden" "$ACTIVE_ROOT/scripts/start-signal-garden-skin.sh" "--restart-existing"
   create_launcher "Signal Garden - Restore" "$ACTIVE_ROOT/scripts/restore-signal-garden-skin.sh" ""
 fi

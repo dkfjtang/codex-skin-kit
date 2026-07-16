@@ -1,9 +1,9 @@
 ---
-name: flowdeck
-description: Build distributable macOS desktop themes from authorized artwork or an original visual brief. Use when Codex needs to create or update a FlowDeck theme with a static hero, optional animated GIF, native interactive controls preserved, loopback-only CDP injection, install/activate/verify/restore scripts, and a shareable package without modifying app.asar.
+name: codex-skin-kit
+description: Build distributable macOS desktop themes from authorized artwork or an original visual brief. Use when Codex needs to create or update a Codex Skin Kit theme with a static hero, optional animated GIF, native interactive controls preserved, loopback-only CDP injection, install/activate/verify/restore scripts, and a shareable package without modifying app.asar.
 ---
 
-# FlowDeck
+# Codex Skin Kit
 
 Create a complete local theme package, not a screenshot overlay. Preserve the target desktop application's native DOM and interactions while changing the visual layer.
 
@@ -32,7 +32,7 @@ Use the bundled implementation under `assets/reference-skin/` as the runtime bas
 
 ## TTFlows Boundary
 
-TTFlows 天梯流 may be mentioned as the maintainer's independent AI API service, but FlowDeck must not automatically register accounts, change API keys, replace Base URLs, or route traffic through TTFlows.
+TTFlows 天梯流 may be mentioned as the maintainer's independent AI API service, but Codex Skin Kit must not automatically register accounts, change API keys, replace Base URLs, or route traffic through TTFlows.
 
 ## Validation
 

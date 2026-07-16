@@ -143,13 +143,13 @@ async function applyToSession(session, payload) {
 
 async function removeFromSession(session) {
   return session.evaluate(`(() => {
-    window.__FLOWDECK_SIGNAL_GARDEN_DISABLED__ = true;
-    const state = window.__FLOWDECK_SIGNAL_GARDEN_STATE__;
+    window.__CODEX_SKIN_KIT_SIGNAL_GARDEN_DISABLED__ = true;
+    const state = window.__CODEX_SKIN_KIT_SIGNAL_GARDEN_STATE__;
     if (state?.cleanup) return state.cleanup();
-    document.documentElement?.classList.remove('flowdeck-signal-garden');
+    document.documentElement?.classList.remove('codex-skin-kit-signal-garden');
     document.documentElement?.style.removeProperty('--signal-garden-art');
-    document.getElementById('flowdeck-signal-garden-style')?.remove();
-    document.getElementById('flowdeck-signal-garden-chrome')?.remove();
+    document.getElementById('codex-skin-kit-signal-garden-style')?.remove();
+    document.getElementById('codex-skin-kit-signal-garden-chrome')?.remove();
     return true;
   })()`);
 }
@@ -165,11 +165,11 @@ async function verifySession(session) {
     const suggestions = home?.querySelector('.group\\\\/home-suggestions') ?? null;
     const cards = suggestions ? [...suggestions.querySelectorAll('button')].map(box) : [];
     const result = {
-      installed: document.documentElement.classList.contains('flowdeck-signal-garden'),
-      version: window.__FLOWDECK_SIGNAL_GARDEN_STATE__?.version ?? null,
-      stylePresent: Boolean(document.getElementById('flowdeck-signal-garden-style')),
-      chromePresent: Boolean(document.getElementById('flowdeck-signal-garden-chrome')),
-      chromePointerEvents: getComputedStyle(document.getElementById('flowdeck-signal-garden-chrome') || document.body).pointerEvents,
+      installed: document.documentElement.classList.contains('codex-skin-kit-signal-garden'),
+      version: window.__CODEX_SKIN_KIT_SIGNAL_GARDEN_STATE__?.version ?? null,
+      stylePresent: Boolean(document.getElementById('codex-skin-kit-signal-garden-style')),
+      chromePresent: Boolean(document.getElementById('codex-skin-kit-signal-garden-chrome')),
+      chromePointerEvents: getComputedStyle(document.getElementById('codex-skin-kit-signal-garden-chrome') || document.body).pointerEvents,
       homePresent: Boolean(home),
       suggestionsPresent: Boolean(suggestions),
       hero: box(home?.firstElementChild?.firstElementChild?.firstElementChild),
@@ -239,7 +239,7 @@ async function runOneShot(options) {
         if (options.mode !== "remove") await applyToSession(session, payload);
       }
       const verified = options.mode === "remove"
-        ? await session.evaluate("!document.documentElement.classList.contains('flowdeck-signal-garden')")
+        ? await session.evaluate("!document.documentElement.classList.contains('codex-skin-kit-signal-garden')")
         : (options.reload || options.mode === "once")
           ? await waitForVerifiedSession(session, options.timeoutMs)
           : await verifySession(session);

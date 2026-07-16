@@ -1,4 +1,4 @@
-:root.flowdeck-signal-garden {
+:root.codex-skin-kit-signal-garden {
   color-scheme: light !important;
   --signal-garden-ink: #493620;
   --signal-garden-cocoa: #6f4a25;
@@ -9,7 +9,7 @@
   --signal-garden-line: rgba(185, 126, 49, .38);
 }
 
-html.flowdeck-signal-garden body {
+html.codex-skin-kit-signal-garden body {
   background:
     radial-gradient(circle at 78% 2%, rgba(255, 202, 92, .44), transparent 25%),
     radial-gradient(circle at 24% 12%, rgba(167, 186, 131, .24), transparent 28%),
@@ -18,7 +18,7 @@ html.flowdeck-signal-garden body {
   font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
 }
 
-html.flowdeck-signal-garden body::before {
+html.codex-skin-kit-signal-garden body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -32,7 +32,7 @@ html.flowdeck-signal-garden body::before {
   background-size: 53px 53px, 67px 67px;
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel {
   background:
     linear-gradient(180deg, rgba(255,253,242,.98), rgba(250,240,207,.96)) !important;
   border: 1px solid rgba(210, 166, 92, .42) !important;
@@ -43,22 +43,22 @@ html.flowdeck-signal-garden aside.app-shell-left-panel {
   color: var(--signal-garden-ink) !important;
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel nav {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel nav {
   background: transparent !important;
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel button {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel button {
   color: #52391f !important;
   transition: transform .16s ease, background .16s ease, box-shadow .16s ease !important;
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel button:hover {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel button:hover {
   background: linear-gradient(90deg, rgba(255,224,143,.66), rgba(207,219,176,.56)) !important;
   box-shadow: inset 0 0 0 1px rgba(191,127,45,.20) !important;
   transform: translateX(1px);
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel button[aria-label^="切换模式"] {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel button[aria-label^="切换模式"] {
   background: transparent !important;
   border-color: transparent !important;
   font-family: Georgia, "Times New Roman", serif !important;
@@ -68,20 +68,20 @@ html.flowdeck-signal-garden aside.app-shell-left-panel button[aria-label^="切�
   text-shadow: 0 2px 10px rgba(232,166,56,.24);
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
   content: "🐾";
   margin-left: 2px;
   color: #7f9165;
 }
 
-html.flowdeck-signal-garden aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
-html.flowdeck-signal-garden aside.app-shell-left-panel [aria-current="page"] {
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
+html.codex-skin-kit-signal-garden aside.app-shell-left-panel [aria-current="page"] {
   background: linear-gradient(90deg, rgba(255,218,124,.68), rgba(212,223,183,.66)) !important;
   border: 1px solid rgba(183,124,47,.28) !important;
   box-shadow: 0 4px 16px rgba(114,76,30,.10) !important;
 }
 
-html.flowdeck-signal-garden main.main-surface {
+html.codex-skin-kit-signal-garden main.main-surface {
   background:
     radial-gradient(circle at 84% 10%, rgba(255,204,95,.26), transparent 30%),
     radial-gradient(circle at 20% 0%, rgba(174,190,139,.20), transparent 26%),
@@ -94,14 +94,14 @@ html.flowdeck-signal-garden main.main-surface {
   overflow: hidden !important;
 }
 
-html.flowdeck-signal-garden main.main-surface > header.app-header-tint {
+html.codex-skin-kit-signal-garden main.main-surface > header.app-header-tint {
   background:
     linear-gradient(90deg, rgba(255,253,242,.96), rgba(255,232,164,.82), rgba(211,222,183,.74)) !important;
   border-bottom: 1px solid rgba(203,151,72,.30) !important;
   backdrop-filter: none !important;
 }
 
-#flowdeck-signal-garden-chrome {
+#codex-skin-kit-signal-garden-chrome {
   position: fixed;
   z-index: 31;
   pointer-events: none;
@@ -121,7 +121,7 @@ html.flowdeck-signal-garden main.main-surface > header.app-header-tint {
   text-shadow: 0 1px 0 white;
 }
 
-#flowdeck-signal-garden-chrome.signal-garden-home-shell .signal-garden-brand { display: flex; }
+#codex-skin-kit-signal-garden-chrome.signal-garden-home-shell .signal-garden-brand { display: flex; }
 .signal-garden-brand .signal-garden-note { font-size: 25px; filter: drop-shadow(0 2px 4px rgba(132,87,29,.22)); animation: signalGardenNote 1.4s ease-in-out infinite; transform-origin: bottom center; }
 .signal-garden-brand b { display: block; font-size: 15px; letter-spacing: .04em; }
 .signal-garden-brand small { display: block; margin-top: 1px; color: #9b713d; font-size: 9px; letter-spacing: .11em; }
@@ -137,7 +137,7 @@ html.flowdeck-signal-garden main.main-surface > header.app-header-tint {
   text-shadow: 0 0 8px white, 0 2px 8px rgba(137,91,34,.18);
   transform: rotate(-2deg);
 }
-#flowdeck-signal-garden-chrome.signal-garden-home-shell .signal-garden-signature { display: block; }
+#codex-skin-kit-signal-garden-chrome.signal-garden-home-shell .signal-garden-signature { display: block; }
 
 .signal-garden-sparkles { position: absolute; inset: 48px 0 0; opacity: .76; overflow: hidden; }
 .signal-garden-sparkles i { position: absolute; top: -18px; width: 13px; height: 13px; border: 2px solid #a86820; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff2a5 0 12%, #f5c343 35%, #d98c22 100%); box-shadow: 0 3px 8px rgba(112,71,20,.24); animation: signalGardenPulse 4.8s linear infinite; }
@@ -165,7 +165,7 @@ html.flowdeck-signal-garden main.main-surface > header.app-header-tint {
   border-radius: 50%;
   animation: signalGardenFloat 3.2s ease-in-out infinite;
 }
-#flowdeck-signal-garden-chrome.signal-garden-home-shell .signal-garden-polaroid { display: block; }
+#codex-skin-kit-signal-garden-chrome.signal-garden-home-shell .signal-garden-polaroid { display: block; }
 .signal-garden-polaroid::before { content: "💰"; position: absolute; left: -18px; top: -19px; font-size: 29px; filter: drop-shadow(0 3px 4px rgba(120,77,22,.22)); }
 
 .signal-garden-ribbon {
@@ -186,7 +186,7 @@ html.flowdeck-signal-garden main.main-surface > header.app-header-tint {
   filter: drop-shadow(0 4px 5px rgba(113,73,25,.16));
   animation: signalGardenBadge 1.8s ease-in-out infinite;
 }
-#flowdeck-signal-garden-chrome.signal-garden-home-shell .signal-garden-ribbon { display: flex; }
+#codex-skin-kit-signal-garden-chrome.signal-garden-home-shell .signal-garden-ribbon { display: flex; }
 .signal-garden-ribbon span { font-size: 15px; color: #d18b27; }
 
 @keyframes signalGardenPulse { 0% { translate: 0 -28px; rotate: 0deg; opacity: 0; } 10% { opacity: .9; } 88% { opacity: .85; } 100% { translate: 18px calc(100vh - 88px); rotate: 720deg; opacity: 0; } }
@@ -194,12 +194,12 @@ html.flowdeck-signal-garden main.main-surface > header.app-header-tint {
 @keyframes signalGardenFloat { 0%, 100% { transform: rotate(5deg) translateY(0); } 50% { transform: rotate(7deg) translateY(-7px); } }
 @keyframes signalGardenBadge { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.035); } }
 
-html.flowdeck-signal-garden [role="main"] {
+html.codex-skin-kit-signal-garden [role="main"] {
   background: transparent !important;
   scrollbar-color: rgba(184,125,45,.48) transparent;
 }
 
-html.flowdeck-signal-garden .signal-garden-home {
+html.codex-skin-kit-signal-garden .signal-garden-home {
   --thread-content-max-width: min(950px, calc(100cqw - 44px)) !important;
   overflow-x: hidden !important;
 }
@@ -374,7 +374,7 @@ html.flowdeck-signal-garden .signal-garden-home {
   text-align: center !important;
 }
 
-html.flowdeck-signal-garden .composer-surface-chrome {
+html.codex-skin-kit-signal-garden .composer-surface-chrome {
   border: 2px solid rgba(211,155,66,.54) !important;
   border-radius: 25px !important;
   background:
@@ -385,7 +385,7 @@ html.flowdeck-signal-garden .composer-surface-chrome {
   overflow: visible !important;
 }
 
-html.flowdeck-signal-garden .composer-surface-chrome::before {
+html.codex-skin-kit-signal-garden .composer-surface-chrome::before {
   content: "🐾";
   position: absolute;
   left: -13px;
@@ -431,19 +431,19 @@ html.flowdeck-signal-garden .composer-surface-chrome::before {
   box-shadow: 0 3px 10px rgba(105,68,24,.10) !important;
 }
 
-html.flowdeck-signal-garden .ProseMirror {
+html.codex-skin-kit-signal-garden .ProseMirror {
   color: #51391f !important;
   caret-color: #d9852e !important;
 }
 
-html.flowdeck-signal-garden button[class~="bg-token-foreground"] {
+html.codex-skin-kit-signal-garden button[class~="bg-token-foreground"] {
   background: linear-gradient(145deg, #efb53e, #d57b2e) !important;
   color: white !important;
   box-shadow: 0 5px 12px rgba(126,79,22,.24) !important;
 }
 
-html.flowdeck-signal-garden article,
-html.flowdeck-signal-garden [data-message-author-role] {
+html.codex-skin-kit-signal-garden article,
+html.codex-skin-kit-signal-garden [data-message-author-role] {
   border-radius: 20px;
 }
 

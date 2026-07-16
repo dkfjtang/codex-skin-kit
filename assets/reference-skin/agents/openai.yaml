@@ -1,4 +1,4 @@
 interface:
   display_name: "Signal Garden"
-  short_description: "Apply and restore the FlowDeck Signal Garden theme."
-  default_prompt: "Use $flowdeck-signal-garden to apply, verify, update, or restore the Signal Garden theme."
+  short_description: "Apply and restore the Codex Skin Kit Signal Garden theme."
+  default_prompt: "Use $codex-skin-kit-signal-garden to apply, verify, update, or restore the Signal Garden theme."
