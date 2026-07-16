@@ -19,6 +19,7 @@ This review records the current truth boundary for the README focus areas.
 ```
 
 - A real macOS screenshot has not been produced in this Windows workspace. README must not call the generated preview a real runtime screenshot until that verification is completed.
+- If a third-party screenshot is used before local macOS verification is available, README must describe it as a community-provided runtime reference screenshot. The source, reuse permission, sensitive-content check, and lack of local re-verification must be recorded before publishing.
 
 ## Operations And Safety Review
 
@@ -29,4 +30,4 @@ This review records the current truth boundary for the README focus areas.
 
 ## Recommendation
 
-Keep the existing reused runtime approach, but keep the README wording tied to proven behavior. Replace the generated theme-style preview with a real macOS verification screenshot once available.
+Keep the existing reused runtime approach, but keep the README wording tied to proven behavior. Prefer replacing the generated theme-style preview with a real macOS verification screenshot once available. If a third-party screenshot is used as an interim hero image, treat it as a licensed reference asset, not as local verification evidence.
