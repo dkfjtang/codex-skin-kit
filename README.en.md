@@ -4,7 +4,9 @@
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-A free Codex desktop skin toolkit with an installable, verifiable, and restorable reference theme. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
+Give Codex desktop a face that feels alive.
+
+External theme / skin toolkit · local CDP injection · no official app package changes. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
 
 ## Preview
 
@@ -94,3 +96,7 @@ Using TTFlows is optional and not required for any skin feature. This project do
 ## License
 
 Codex Skin Kit is released under the MIT License. Third-party notices are available in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
+
+---
+
+Star it, pick an image, and make Codex feel the way you want today.
