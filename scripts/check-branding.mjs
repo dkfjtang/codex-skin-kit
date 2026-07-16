@@ -74,6 +74,7 @@ const required = [
   "SECURITY.md",
   "SPONSORSHIP.md",
   "THIRD_PARTY_NOTICES.md",
+  "docs/A_MINUS_PROJECT_EVALUATION.md",
   "docs/SCREENSHOT_REVIEW.md",
   "docs/RELEASE_NOTES_v0.1.0.md",
   "scripts/check-screenshot-review.mjs",

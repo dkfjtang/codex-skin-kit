@@ -16,6 +16,7 @@ This release positions the repository as a real, reversible local Codex skin too
 - ttflows support-service section, without making ttflows required for any skin feature.
 - Branding and compliance scan.
 - Screenshot review gate and six regression cases for README screenshot wording modes.
+- A- project evaluation, schedule, and expert-review boundary in `docs/A_MINUS_PROJECT_EVALUATION.md`.
 
 ## Verification
 

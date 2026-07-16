@@ -2,6 +2,8 @@
 
 This review records the current truth boundary for the README focus areas.
 
+Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION.md`.
+
 ## Review Status
 
 - Review date: 2026-07-16.
