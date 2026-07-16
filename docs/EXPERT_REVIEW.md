@@ -43,6 +43,7 @@ This review records the current truth boundary for the README focus areas.
 - Chinese and English READMEs describe the same install, start, verify, and restore commands.
 - The Chinese default README now contains an explicit preview image and states that it is generated, not a local macOS runtime capture.
 - `docs/RELEASE.md` requires provenance and permission review before a third-party screenshot can be published.
+- `docs/SCREENSHOT_REVIEW.md` is the required intake and rejection gate before replacing the README hero with a third-party screenshot.
 - Runtime claims are cross-checked against `install-signal-garden-skin.sh`, `start-signal-garden-skin.sh`, `verify-signal-garden-skin.sh`, `restore-signal-garden-skin.sh`, and `injector.mjs`.
 
 ## Re-Validation

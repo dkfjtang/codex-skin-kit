@@ -482,3 +482,9 @@ Remaining external input:
 - A third-party screenshot file.
 - The screenshot source and public reuse permission.
 - Confirmation that visible content is non-sensitive and acceptable for a public README.
+
+### 2026-07-16 screenshot gate pass
+
+- Added `docs/SCREENSHOT_REVIEW.md` as the intake and rejection gate for third-party screenshots.
+- Added the screenshot review document to the static required-file check.
+- Updated expert review and release checklist references so third-party image publication requires a durable review record.
