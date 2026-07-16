@@ -60,6 +60,7 @@ const required = [
   "SPONSORSHIP.md",
   "THIRD_PARTY_NOTICES.md",
   "assets/reference-skin/assets/signal-garden-source.png",
+  "assets/reference-skin/assets/signal-garden-preview.png",
   "assets/reference-skin/assets/signal-garden-hero.gif"
 ];
 for (const rel of required) {

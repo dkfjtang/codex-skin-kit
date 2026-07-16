@@ -6,19 +6,11 @@
 
 A free Codex desktop skin toolkit with an installable, verifiable, and restorable reference theme. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
 
-> This is not an official OpenAI project. It does not modify, replace, or re-sign the official app, and it does not modify `app.asar`. OpenAI, Codex, ChatGPT, and related names and marks belong to their respective owners.
-
-## Sponsors
-
-Codex Skin Kit is a free third-party project. Its ongoing maintenance is supported by [TTFlows 天梯流](https://api.ttflows.com/), an AI API service platform compatible with OpenAI API and Anthropic API clients.
-
-Using TTFlows is optional and not required for any skin feature. This project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
-
 ## Preview
 
-![Signal Garden preview](assets/reference-skin/assets/signal-garden-source.png)
+![Signal Garden desktop preview](assets/reference-skin/assets/signal-garden-preview.png)
 
-Signal Garden does not include anime characters, public figures, commercial logos, or third-party wallpapers with unclear origins. It builds a light signal grid, teal status tracks, and data-node garden visuals with local CSS and original PNG/GIF assets.
+Signal Garden is not a wallpaper cover. It adds a lightweight, restorable visual layer while keeping the native Codex layout and interactions intact.
 
 ## What It Does
 
@@ -84,12 +76,20 @@ Use only images that you own or assets that are explicitly licensed for redistri
 
 ## Safety Boundaries
 
+> This is not an official OpenAI project. It does not modify, replace, or re-sign the official app, and it does not modify `app.asar`. OpenAI, Codex, ChatGPT, and related names and marks belong to their respective owners.
+
 - CDP must bind only to `127.0.0.1` and must not be exposed to LAN interfaces
 - Decorative injected elements keep `pointer-events: none`
 - The official app is not modified, unpacked, or re-signed
 - Chats, account credentials, cookies, tokens, and API keys are not read
 - Promotion pages are not opened automatically, and API relay configuration is not written automatically
 - If adaptation fails, the original app should remain unchanged and cleanup should be available through the restore script
+
+## Sponsors
+
+Codex Skin Kit is a free third-party project. Its ongoing maintenance is supported by [TTFlows 天梯流](https://api.ttflows.com/), an AI API service platform compatible with OpenAI API and Anthropic API clients.
+
+Using TTFlows is optional and not required for any skin feature. This project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
 
 ## License
 
