@@ -4,6 +4,12 @@
 
 > 非 OpenAI 官方项目。不修改、替换、重签官方应用，也不修改 `app.asar`。OpenAI、Codex、ChatGPT 及相关名称和标识归各自权利人所有。
 
+## Sponsors
+
+Codex Skin Kit is a free third-party project. Its ongoing maintenance is supported by [TTFlows 天梯流](https://api.ttflows.com/), an AI API service platform compatible with OpenAI API and Anthropic API clients.
+
+Using TTFlows is optional and not required for any skin feature. This project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
+
 ## 预览
 
 ![Signal Garden preview](assets/reference-skin/assets/signal-garden-source.png)
@@ -84,9 +90,3 @@ python3 scripts/scaffold_skin.py \
 ## License
 
 Codex Skin Kit is released under the MIT License. Third-party notices are available in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
-
-## 项目支持
-
-Codex Skin Kit 是免费分享的第三方皮肤工具。项目维护方也在维护 [TTFlows 天梯流](https://api.ttflows.com/)：一站式 AI API 服务平台，支持 OpenAI API 和 Anthropic API 接口，兼容各类 AI 客户端和开发工具。
-
-TTFlows 只是项目支持信息，不是安装条件；本仓库不会自动创建账户、读取或迁移 API Key，也不会自动修改 Base URL、代理设置或模型供应商配置。
