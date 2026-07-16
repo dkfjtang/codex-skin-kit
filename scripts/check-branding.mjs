@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const textExtensions = new Set([".md", ".json", ".yaml", ".yml", ".sh", ".mjs", ".js", ".cjs", ".css", ".toml", ".txt", ".py"]);
-const skippedFiles = new Set(["scripts/check-branding.mjs"]);
+const skippedFiles = new Set(["scripts/check-branding.mjs", "scripts/check-readme-structure.mjs"]);
 const allowed = new Map([
   ["Codex Skin Builder", new Set(["LICENSE", "THIRD_PARTY_NOTICES.md"])],
   ["Codex Skin Builder contributors", new Set(["LICENSE", "THIRD_PARTY_NOTICES.md"])],
@@ -77,6 +77,7 @@ const required = [
   "docs/A_MINUS_PROJECT_EVALUATION.md",
   "docs/SCREENSHOT_REVIEW.md",
   "docs/RELEASE_NOTES_v0.1.0.md",
+  "scripts/check-readme-structure.mjs",
   "scripts/check-screenshot-review.mjs",
   "scripts/check-screenshot-review.test.mjs",
   "assets/brand/ttflows-logo.png",

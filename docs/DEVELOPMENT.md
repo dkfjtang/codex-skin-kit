@@ -17,6 +17,7 @@ npm run check
 The check currently covers:
 
 - branding and legacy-theme residue scanning;
+- README section order, Chinese-default entry, support-service placement, and ttflows wording;
 - README screenshot-mode consistency;
 - screenshot review-gate regression cases;
 - Python syntax checks for helper scripts;
