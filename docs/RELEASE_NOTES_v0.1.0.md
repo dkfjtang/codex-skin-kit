@@ -10,6 +10,7 @@ This release positions the repository as a real, reversible local Codex skin too
 
 - Signal Garden reference skin assets and runtime scripts.
 - macOS install, start, verify, restore, and uninstall paths.
+- Install-time backup and appearance-theme write for `~/.codex/config.toml`, with `--restore-base-theme` rollback documentation.
 - Local-only CDP injection through `127.0.0.1`.
 - Theme scaffolding helper for generating a standalone skin package from owned or redistributable assets.
 - Chinese default README and English README.
@@ -39,12 +40,7 @@ Screenshot review gate passed (generated).
 Screenshot review gate tests passed (6 cases).
 ```
 
-Hosted verification must pass for the exact release commit before publication. Recent hosted baseline evidence:
-
-```text
-check #29489214569: success
-headSha: 5dc4672dddb96a7172e245752fff7f20c6856344
-```
+Hosted verification must pass for the exact release commit before publication. Record the final GitHub Actions run URL and head SHA here only after the release commit is selected.
 
 ## Screenshot Status
 
@@ -71,6 +67,7 @@ Release notes for a public GitHub Release must state this clearly unless a macOS
 
 - The runtime must bind CDP only to `127.0.0.1`.
 - The project must not modify, unpack, replace, or re-sign the official app bundle or `app.asar`.
+- The installer writes only Codex appearance-theme fields in `~/.codex/config.toml`; it must not write model provider, Base URL, proxy, account, token, or API key settings.
 - The project must not read chats, cookies, tokens, API keys, payment data, or account credentials.
 - The project must not automatically change model provider, Base URL, proxy, or ttflows configuration.
 - The restore script is the rollback path for injected runtime state and local launchers.

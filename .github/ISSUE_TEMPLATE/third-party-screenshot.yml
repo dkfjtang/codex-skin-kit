@@ -13,9 +13,9 @@ body:
   - type: input
     id: source
     attributes:
-      label: Source
-      description: Where did the screenshot come from? Provide a public URL or describe the private source.
-      placeholder: "https://..."
+      label: Public source or redacted source summary
+      description: Provide a public URL when available. If the source is private, do not reveal private names or details here; write a redacted summary and provide private evidence to the maintainer separately.
+      placeholder: "https://... / Private source provided to maintainer separately"
     validations:
       required: true
   - type: input
@@ -30,8 +30,8 @@ body:
     id: permission
     attributes:
       label: Permission and evidence
-      description: Explain why this repository may reuse the screenshot publicly in the README. Link to the license, written approval, or source page.
-      placeholder: "Public license / explicit approval / source page..."
+      description: Explain why this repository may reuse the screenshot publicly in the README. Link only public evidence here. Do not paste private permission text into this public issue.
+      placeholder: "Public license / explicit approval link / private permission evidence provided to maintainer separately..."
     validations:
       required: true
   - type: textarea
@@ -77,6 +77,8 @@ body:
         - label: I understand this image may only be described as a community-provided runtime reference screenshot unless local macOS verification is completed.
           required: true
         - label: I understand this image must not imply that this repository generated or verified it in the current Windows workspace.
+          required: true
+        - label: I confirm this issue does not disclose private source details, private project names, private partner names, or non-public permission text.
           required: true
         - label: I confirm the screenshot is suitable for public README use.
           required: true

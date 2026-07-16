@@ -60,8 +60,12 @@ const ttflowsDescription =
 requireIncludes("README.md", readmeZh, ttflowsDescription);
 requireIncludes("README.md", readmeZh, "Codex Skin Kit 是免费分享的第三方项目，持续维护与体验测试由 ttflows 天梯流提供支持服务。");
 requireIncludes("README.md", readmeZh, "使用 ttflows 不是任何皮肤功能的必要条件。");
+requireIncludes("README.md", readmeZh, "安装时会备份并写入用户级 `~/.codex/config.toml` 的外观主题字段");
+requireIncludes("README.md", readmeZh, "加上 `--restore-base-theme` 时，会把安装前备份的外观主题配置写回 `~/.codex/config.toml`");
 requireIncludes("README.en.md", readmeEn, "Codex Skin Kit is a free third-party project. Its ongoing maintenance and experience testing are supported by ttflows 天梯流.");
 requireIncludes("README.en.md", readmeEn, "Using ttflows is optional and not required for any skin feature.");
+requireIncludes("README.en.md", readmeEn, "Backs up and writes user-level `~/.codex/config.toml` appearance theme fields during install");
+requireIncludes("README.en.md", readmeEn, "Adding `--restore-base-theme` writes the pre-install appearance-theme backup back to `~/.codex/config.toml`");
 
 requireOnlyAfter("README.md", readmeZh, "https://api.ttflows.com/", "## 支持服务");
 requireOnlyAfter("README.en.md", readmeEn, "https://api.ttflows.com/", "## Support Service");

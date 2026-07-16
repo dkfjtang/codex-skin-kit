@@ -73,3 +73,9 @@ Keep the existing reused runtime approach, but keep the README wording tied to p
 - Support-service placement remains secondary to the skin tool and is not required for runtime features.
 - macOS live validation and screenshot capture remain not executed in this Windows workspace.
 - Final A- screenshot closeout requires either macOS verification evidence or a completed third-party screenshot review record.
+
+## Review Follow-Up
+
+- Installation documentation now states that the installer backs up and writes user-level `~/.codex/config.toml` appearance-theme fields, and that `--restore-base-theme` restores the pre-install appearance-theme backup.
+- Release notes no longer present an old hosted `headSha` as current evidence. They require the final GitHub Actions run URL and head SHA to be recorded only after the release commit is selected.
+- The third-party screenshot issue template and `docs/SCREENSHOT_REVIEW.md` now prohibit putting private source details, private project names, private partner names, or non-public permission text in a public GitHub issue.

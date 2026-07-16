@@ -30,6 +30,7 @@ After a real-device screenshot is available, it should replace the README hero i
 - Creates `Signal Garden.app` and `Signal Garden - Restore.app` desktop launchers
 - Injects CSS and decorative chrome into the official Codex desktop window through local `127.0.0.1` CDP
 - Keeps the native Codex DOM and interactions instead of covering the window with a screenshot or replacing the app package
+- Backs up and writes user-level `~/.codex/config.toml` appearance theme fields during install; the restore script can roll those fields back with `--restore-base-theme`
 - Uses `verify-signal-garden-skin.sh` to check injection state and optionally export a screenshot
 - Uses `restore-signal-garden-skin.sh` to remove the skin, stop the injector process, and optionally uninstall launchers
 - Does not read chats, cookies, tokens, or API keys, and does not automatically change model providers, Base URL, or proxy settings
@@ -49,6 +50,8 @@ The installer copies the full theme to `~/.codex/skills/codex-skin-kit-signal-ga
 - `Signal Garden.app`
 - `Signal Garden - Restore.app`
 
+The installer also backs up the current `~/.codex/config.toml` into the skin state directory and writes Codex appearance-theme fields so the desktop app can load Signal Garden's base theme settings. This configuration change is limited to appearance fields; it does not write model, Base URL, proxy, or API key settings.
+
 Launch the theme:
 
 ```zsh
@@ -67,6 +70,8 @@ Restore or uninstall:
 ~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh
 ~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh --restore-base-theme --uninstall
 ```
+
+Running `restore-signal-garden-skin.sh` by itself stops injection and clears the current skin effect. Adding `--restore-base-theme` writes the pre-install appearance-theme backup back to `~/.codex/config.toml`.
 
 > The first run may require closing existing Codex windows or explicitly using `--restart-existing`. Do not restart an active user window without permission.
 

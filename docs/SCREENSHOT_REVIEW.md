@@ -13,7 +13,7 @@ This file is the publication gate for any README hero image that is not generate
 
 Record all items below before replacing `assets/reference-skin/assets/signal-garden-preview.png` with a third-party image.
 
-If the screenshot is submitted through GitHub, use `.github/ISSUE_TEMPLATE/third-party-screenshot.yml` so the source, permission, sensitive-content review, and runtime boundary are captured before maintainer review.
+If the screenshot is submitted through GitHub, use `.github/ISSUE_TEMPLATE/third-party-screenshot.yml` so the source, permission, sensitive-content review, and runtime boundary are captured before maintainer review. Do not put private source details, private project names, private partner names, or non-public permission text in a public GitHub issue. If permission evidence is private, the public issue should say that private evidence was provided to the maintainer separately, and this review file should record only the redacted decision.
 
 ```md
 ## Third-Party Screenshot Intake
@@ -35,10 +35,10 @@ If the screenshot is submitted through GitHub, use `.github/ISSUE_TEMPLATE/third
 
 ## Acceptance Rules
 
-- `Source` identifies where the screenshot came from.
+- `Source` identifies where the screenshot came from, using a public URL or a redacted source summary suitable for a public repository.
 - `Provider` identifies who supplied it or which project published it.
 - `Permission` states why public reuse in this repository is allowed.
-- `Permission evidence` points to an explicit written approval, public license, or source page.
+- `Permission evidence` points to an explicit written approval, public license, or source page. Private permission evidence must not be pasted into a public GitHub issue.
 - `Screenshot file` names the exact repository path used for the README image.
 - `Public README use approved` is `yes` only after source and permission are clear.
 - `Sensitive content review` confirms no private chats, email addresses, account names, tokens, API keys, billing data, usage data, internal hostnames, or private project names are visible.
