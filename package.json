@@ -1,0 +1,22 @@
+﻿{
+    "name":  "@ttflows/flowdeck",
+    "version":  "0.1.0",
+    "description":  "A free third-party desktop theme tool maintained by TTFlows.",
+    "type":  "module",
+    "license":  "MIT",
+    "private":  false,
+    "scripts":  {
+                    "check":  "node scripts/check-branding.mjs \u0026\u0026 python -m py_compile scripts/scaffold_skin.py \u0026\u0026 node --check assets/reference-skin/scripts/injector.mjs \u0026\u0026 node --check assets/reference-skin/assets/renderer-inject.js \u0026\u0026 node -e \"JSON.parse(require(\u0027fs\u0027).readFileSync(\u0027assets/reference-skin/skin.json\u0027,\u0027utf8\u0027))\"",
+                    "check:branding":  "node scripts/check-branding.mjs"
+                },
+    "keywords":  [
+                     "desktop-theme",
+                     "local-theme",
+                     "flowdeck",
+                     "ttflows"
+                 ],
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/dkfjtang/flowdeck.git"
+                   }
+}

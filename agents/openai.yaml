@@ -1,0 +1,4 @@
+interface:
+  display_name: "FlowDeck"
+  short_description: "Build and apply local desktop themes maintained by TTFlows."
+  default_prompt: "Use $flowdeck to create, install, verify, or restore a FlowDeck theme."
