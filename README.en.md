@@ -93,7 +93,22 @@ Use only images that you own or assets that are explicitly licensed for redistri
 
 ## Support Service
 
-Codex Skin Kit is a free third-party project. Its ongoing maintenance and experience testing are supported by [ttflows 天梯流](https://api.ttflows.com/).
+<p align="center">
+  <a href="https://api.ttflows.com/">
+    <img src="assets/brand/ttflows-logo.png" alt="ttflows 天梯流" width="132">
+  </a>
+</p>
+
+<p align="center">
+  <strong>ttflows 天梯流</strong><br>
+  A one-stop AI API service platform for simple, stable model access in AI clients and developer tools.
+</p>
+
+<p align="center">
+  <a href="https://api.ttflows.com/"><strong>Visit ttflows 天梯流 →</strong></a>
+</p>
+
+Codex Skin Kit is a free third-party project. Its ongoing maintenance and experience testing are supported by ttflows 天梯流.
 
 ttflows 天梯流 is a one-stop AI API service platform that brings together multiple mainstream large models, supports OpenAI API and Anthropic API interfaces, works with many AI clients and developer tools, keeps pricing transparent, makes integration simple, and continues to improve for developers and AI enthusiasts.
 
