@@ -1,14 +1,18 @@
 # Codex Skin Kit
 
+<p align="center">
+  <strong>中文</strong> · <a href="./README.en.md">English</a>
+</p>
+
 免费的 Codex 桌面皮肤工具，内置可安装、可验证、可恢复的主题包。首版主题 **Signal Garden** 使用原创抽象信号网格视觉，让 Codex 桌面界面更有氛围，但仍保留原生侧边栏、项目选择器、功能卡、输入框和任务内容。
 
 > 非 OpenAI 官方项目。不修改、替换、重签官方应用，也不修改 `app.asar`。OpenAI、Codex、ChatGPT 及相关名称和标识归各自权利人所有。
 
-## Sponsors
+## 赞助商
 
-Codex Skin Kit is a free third-party project. Its ongoing maintenance is supported by [TTFlows 天梯流](https://api.ttflows.com/), an AI API service platform compatible with OpenAI API and Anthropic API clients.
+Codex Skin Kit 是免费分享的第三方项目，持续维护由 [TTFlows 天梯流](https://api.ttflows.com/) 支持。TTFlows 是一站式 AI API 服务平台，支持 OpenAI API 和 Anthropic API 接口，兼容各类 AI 客户端和开发工具。
 
-Using TTFlows is optional and not required for any skin feature. This project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
+使用 TTFlows 不是任何皮肤功能的必要条件。本项目不会自动创建账户、读取 API Key，也不会自动修改 Base URL、代理或模型供应商配置。
 
 ## 预览
 

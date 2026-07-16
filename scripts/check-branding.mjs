@@ -7,9 +7,9 @@ const skippedFiles = new Set(["scripts/check-branding.mjs"]);
 const allowed = new Map([
   ["Codex Skin Builder", new Set(["LICENSE", "THIRD_PARTY_NOTICES.md"])],
   ["Codex Skin Builder contributors", new Set(["LICENSE", "THIRD_PARTY_NOTICES.md"])],
-  ["OpenAI", new Set(["README.md", "NOTICE.md", "SECURITY.md", "SPONSORSHIP.md", "assets/reference-skin/SKILL.md", "references/runtime-architecture.md"])],
-  ["ChatGPT", new Set(["README.md", "NOTICE.md", "references/runtime-architecture.md", "assets/reference-skin/references/runtime-notes.md", "assets/reference-skin/scripts/lib.sh"])],
-  ["Anthropic", new Set(["README.md", "NOTICE.md", "SPONSORSHIP.md"])],
+  ["OpenAI", new Set(["README.md", "README.en.md", "NOTICE.md", "SECURITY.md", "SPONSORSHIP.md", "assets/reference-skin/SKILL.md", "references/runtime-architecture.md"])],
+  ["ChatGPT", new Set(["README.md", "README.en.md", "NOTICE.md", "references/runtime-architecture.md", "assets/reference-skin/references/runtime-notes.md", "assets/reference-skin/scripts/lib.sh"])],
+  ["Anthropic", new Set(["README.md", "README.en.md", "NOTICE.md", "SPONSORSHIP.md"])],
   ["Claude", new Set(["NOTICE.md"])],
 ]);
 const forbidden = [
