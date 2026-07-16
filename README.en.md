@@ -6,6 +6,8 @@
 
 Give Codex desktop a face that feels alive.
 
+Start from one image, and tune the first glance of Codex into your own rhythm.
+
 External theme / skin toolkit · local CDP injection · no official app package changes. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
 
 ## Preview
@@ -100,7 +102,3 @@ Using ttflows is optional and not required for any skin feature. This project do
 ## License
 
 Codex Skin Kit is released under the MIT License. Third-party notices are available in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
-
----
-
-Star it, pick an image, and make Codex feel the way you want today.
