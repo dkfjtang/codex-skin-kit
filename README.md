@@ -16,21 +16,27 @@
 
 Signal Garden 的目标不是盖一张壁纸，而是在保留 Codex 原生布局和交互的前提下，给工作区加上轻量、可恢复的视觉层。
 
-预览图基于当前 Signal Garden 主题样式生成；实际界面会随 Codex 版本、窗口宽度和系统字体略有差异。
+上图是基于当前 `signal-garden-skin.css` 生成的主题样式预览，用来说明这套皮肤的目标效果。真正的运行截图请在 macOS + 官方 Codex 桌面环境中通过验证脚本生成：
+
+```zsh
+~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
+```
+
+拿到实机截图后，建议用它替换 README 主图；在此之前，不把当前图片标成“真实运行截图”。
 
 ## 它能做什么
 
-- 安装一套可运行的 Codex 桌面皮肤
-- 保留 Codex 原生 DOM 和交互，不做整窗截图覆盖
-- 通过 `127.0.0.1` 本机 CDP 注入视觉层
-- 提供启动、验证、截图检查、恢复和卸载脚本
-- 不修改官方应用二进制、签名或 `app.asar`
-- 不读取对话、Cookie、Token 或 API Key
-- 不自动修改模型供应商、Base URL 或代理配置
+- 安装一套本地 Codex 皮肤目录到 `~/.codex/skills/codex-skin-kit-signal-garden`
+- 创建 `Signal Garden.app` 和 `Signal Garden - Restore.app` 两个桌面启动器
+- 通过 `127.0.0.1` 本机 CDP 把 CSS 和装饰层注入到官方 Codex 桌面窗口
+- 保留 Codex 原生 DOM 和交互，不做整窗截图覆盖，不替换应用包
+- 用 `verify-signal-garden-skin.sh` 检查注入状态，并可导出当前窗口截图
+- 用 `restore-signal-garden-skin.sh` 移除皮肤、停止注入进程，并可卸载桌面启动器
+- 不读取对话、Cookie、Token 或 API Key，不自动修改模型供应商、Base URL 或代理配置
 
 ## 快速开始
 
-要求：macOS 12 或更高版本、官方 Codex 桌面版、Node.js 18 或更高版本。
+要求：macOS 12 或更高版本、官方 Codex 桌面版、Node.js 18 或更高版本。脚本会查找 Bundle ID 为 `com.openai.codex` 的官方应用，并只绑定本机 `127.0.0.1` 调试端口。
 
 ```zsh
 git clone https://github.com/dkfjtang/codex-skin-kit.git
@@ -66,7 +72,7 @@ cd codex-skin-kit/assets/reference-skin
 
 ## 自定义皮肤
 
-仓库保留主题脚手架能力，可基于一张图片和一个 GIF 生成独立主题包：
+仓库保留主题脚手架能力，可基于一张图片和一个 GIF 生成独立主题包。脚手架会复制运行脚本、替换主题名称/slug，并生成可安装的皮肤目录；它不会自动保证任何图片都能得到完美布局，生成后仍建议运行安装和验证截图。
 
 ```zsh
 python3 scripts/scaffold_skin.py \

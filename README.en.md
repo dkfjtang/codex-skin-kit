@@ -16,21 +16,27 @@ External theme / skin toolkit · local CDP injection · no official app package 
 
 Signal Garden is not a wallpaper cover. It adds a lightweight, restorable visual layer while keeping the native Codex layout and interactions intact.
 
-The preview is generated from the current Signal Garden theme style. The actual UI may vary slightly by Codex version, window size, and system fonts.
+The image above is a theme-style preview generated from the current `signal-garden-skin.css`. To capture the real running result, run the verification script on macOS with the official Codex desktop app:
+
+```zsh
+~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
+```
+
+After a real-device screenshot is available, it should replace the README hero image. Until then, this image is not labeled as a real runtime screenshot.
 
 ## What It Does
 
-- Installs a runnable Codex desktop skin
-- Keeps the native Codex DOM and interactions instead of covering the window with a screenshot
-- Injects the visual layer through a local `127.0.0.1` CDP endpoint
-- Provides launch, verification, screenshot, restore, and uninstall scripts
-- Does not modify official app binaries, signatures, or `app.asar`
-- Does not read chats, cookies, tokens, or API keys
-- Does not automatically change model providers, Base URL, or proxy settings
+- Installs a local Codex skin directory at `~/.codex/skills/codex-skin-kit-signal-garden`
+- Creates `Signal Garden.app` and `Signal Garden - Restore.app` desktop launchers
+- Injects CSS and decorative chrome into the official Codex desktop window through local `127.0.0.1` CDP
+- Keeps the native Codex DOM and interactions instead of covering the window with a screenshot or replacing the app package
+- Uses `verify-signal-garden-skin.sh` to check injection state and optionally export a screenshot
+- Uses `restore-signal-garden-skin.sh` to remove the skin, stop the injector process, and optionally uninstall launchers
+- Does not read chats, cookies, tokens, or API keys, and does not automatically change model providers, Base URL, or proxy settings
 
 ## Quick Start
 
-Requirements: macOS 12 or later, the official Codex desktop app, and Node.js 18 or later.
+Requirements: macOS 12 or later, the official Codex desktop app, and Node.js 18 or later. The scripts look for the official app with Bundle ID `com.openai.codex` and bind only to a local `127.0.0.1` debugging port.
 
 ```zsh
 git clone https://github.com/dkfjtang/codex-skin-kit.git
@@ -66,7 +72,7 @@ Restore or uninstall:
 
 ## Custom Skins
 
-The repository keeps the theme scaffolding workflow. You can generate a standalone theme package from one image and one GIF:
+The repository keeps the theme scaffolding workflow. You can generate a standalone theme package from one image and one GIF. The scaffold copies the runtime scripts, replaces the theme name/slug, and creates an installable skin directory; it does not guarantee that every image will produce a perfect layout, so installation and screenshot verification are still recommended.
 
 ```zsh
 python3 scripts/scaffold_skin.py \
