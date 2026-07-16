@@ -6,7 +6,7 @@
 
 Make Codex desktop easier on the eyes and closer to your own workspace.
 
-An installable, verifiable, and restorable local skin toolkit. Start with a licensed image and give your everyday coding surface a stable, reversible visual state.
+An installable, verifiable, and restorable local skin toolkit. Start with an image and give your everyday coding surface a stable, reversible visual state.
 
 External theme / skin toolkit · local CDP injection · no official app package changes. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
 
@@ -66,7 +66,7 @@ Restore or uninstall:
 
 ## Custom Skins
 
-The repository keeps the theme scaffolding workflow. You can generate a standalone theme package from one licensed image and one GIF:
+The repository keeps the theme scaffolding workflow. You can generate a standalone theme package from one image and one GIF:
 
 ```zsh
 python3 scripts/scaffold_skin.py \
