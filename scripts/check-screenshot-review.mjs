@@ -23,6 +23,13 @@ const modes = {
 };
 
 const failures = [];
+const sectionBetween = (text, start, next) => {
+  const startIndex = text.indexOf(start);
+  const nextIndex = text.indexOf(next);
+  if (startIndex < 0 || nextIndex < 0 || nextIndex < startIndex) return null;
+  return text.slice(startIndex + start.length, nextIndex).trim();
+};
+
 const activeModes = Object.entries(modes).filter(([, markers]) => {
   const zh = readmeZh.includes(markers.zh);
   const en = readmeEn.includes(markers.en);
@@ -30,7 +37,13 @@ const activeModes = Object.entries(modes).filter(([, markers]) => {
   return zh && en;
 });
 
-if (activeModes.length !== 1) {
+const pendingPreview =
+  sectionBetween(readmeZh, "## 效果预览", "## 它能做什么") === "" &&
+  sectionBetween(readmeEn, "## Preview", "## What It Does") === "" &&
+  !readmeZh.includes("signal-garden-preview.png") &&
+  !readmeEn.includes("signal-garden-preview.png");
+
+if (!pendingPreview && activeModes.length !== 1) {
   failures.push(`expected exactly one README screenshot mode, found ${activeModes.length}`);
 }
 
@@ -39,7 +52,16 @@ const field = (name) => {
   return match?.[1].trim() ?? "";
 };
 
-const activeMode = activeModes[0]?.[0];
+const activeMode = pendingPreview ? "pending" : activeModes[0]?.[0];
+if (activeMode === "pending") {
+  if (!screenshotReview.includes("- Hero image status: pending.")) {
+    failures.push("pending preview mode requires matching SCREENSHOT_REVIEW status");
+  }
+  if (!expertReview.includes("README preview section is intentionally empty")) {
+    failures.push("pending preview mode requires matching EXPERT_REVIEW evidence");
+  }
+}
+
 if (activeMode === "generated") {
   if (!screenshotReview.includes("- Hero image status: generated theme-style preview.")) {
     failures.push("generated preview mode requires matching SCREENSHOT_REVIEW status");

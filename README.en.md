@@ -12,18 +12,6 @@ External theme / skin toolkit · local CDP injection · no official app package 
 
 ## Preview
 
-![Signal Garden desktop preview](assets/reference-skin/assets/signal-garden-preview.png)
-
-Signal Garden is not a wallpaper cover. It adds a lightweight, restorable visual layer while keeping the native Codex layout and interactions intact.
-
-The image above is a theme-style preview generated from the current `signal-garden-skin.css`. To capture the real running result, run the verification script on macOS with the official Codex desktop app:
-
-```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
-```
-
-After a real-device screenshot is available, it should replace the README hero image. Until then, this image is not labeled as a real runtime screenshot.
-
 ## What It Does
 
 - Installs a local Codex skin directory at `~/.codex/skills/codex-skin-kit-signal-garden`

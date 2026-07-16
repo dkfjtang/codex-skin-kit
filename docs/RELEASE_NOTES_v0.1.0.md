@@ -19,7 +19,7 @@ This release positions the repository as a real, reversible local Codex skin too
 - README structure and support-service placement scan.
 - Screenshot review gate and six regression cases for README screenshot wording modes.
 - GitHub Actions static validation workflow for `npm run check`.
-- Third-party screenshot issue template for README hero image intake.
+- Third-party screenshot issue template for README preview image intake.
 - A- project evaluation, schedule, and expert-review boundary in `docs/A_MINUS_PROJECT_EVALUATION.md`.
 - A- static audit record in `docs/release/v0.1.0-a-minus-static-audit.md`.
 
@@ -36,21 +36,21 @@ Current verified output in the Windows workspace:
 ```text
 Branding and compliance scan passed.
 README structure and support-service scan passed.
-Screenshot review gate passed (generated).
-Screenshot review gate tests passed (6 cases).
+Screenshot review gate passed (pending).
+Screenshot review gate tests passed (7 cases).
 ```
 
 Hosted verification must pass for the exact release commit before publication. Record the final GitHub Actions run URL and head SHA here only after the release commit is selected.
 
 ## Screenshot Status
 
-- Current README hero: generated theme-style preview.
-- Current screenshot mode: `generated`.
+- Current README preview section: empty.
+- Current screenshot mode: `pending`.
 - macOS runtime screenshot: not produced in this Windows workspace.
 - Third-party screenshot: not provided yet.
 - Publication gate for a third-party screenshot: `docs/SCREENSHOT_REVIEW.md`.
 
-Do not describe the generated preview or any third-party reference image as a screenshot produced by this repository's macOS verification flow.
+Do not describe an empty preview section, generated preview, or third-party reference image as a screenshot produced by this repository's macOS verification flow.
 
 ## Runtime Validation Status
 
@@ -74,7 +74,7 @@ Release notes for a public GitHub Release must state this clearly unless a macOS
 
 ## Screenshot Replacement Path
 
-Use one of these paths before replacing the README hero with a runtime screenshot:
+Use one of these paths before adding a runtime screenshot to the README preview section:
 
 - Preferred: produce a real macOS screenshot with `verify-signal-garden-skin.sh --screenshot` and record the evidence in `docs/EXPERT_REVIEW.md`.
 - Interim: use a third-party authorized runtime reference screenshot only after `docs/SCREENSHOT_REVIEW.md` is fully completed and `npm run check` passes.

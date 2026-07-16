@@ -31,6 +31,14 @@ function requireOnlyAfter(file, text, marker, boundary) {
   if (markerIndex < boundaryIndex) failures.push(`${file}: ${marker} appears before ${boundary}`);
 }
 
+function requireEmptySection(file, text, start, next) {
+  const startIndex = text.indexOf(start);
+  const nextIndex = text.indexOf(next);
+  if (startIndex < 0 || nextIndex < 0 || nextIndex < startIndex) return;
+  const content = text.slice(startIndex + start.length, nextIndex).trim();
+  if (content) failures.push(`${file}: section should be empty: ${start}`);
+}
+
 requireIncludes("README.md", readmeZh, "<strong>中文</strong> · <a href=\"./README.en.md\">English</a>");
 requireIncludes("README.en.md", readmeEn, "<a href=\"./README.md\">中文</a> · <strong>English</strong>");
 
@@ -70,8 +78,8 @@ requireIncludes("README.en.md", readmeEn, "Adding `--restore-base-theme` writes 
 requireOnlyAfter("README.md", readmeZh, "https://api.ttflows.com/", "## 支持服务");
 requireOnlyAfter("README.en.md", readmeEn, "https://api.ttflows.com/", "## Support Service");
 
-requireIncludes("README.md", readmeZh, "![Signal Garden 主题样式预览](assets/reference-skin/assets/signal-garden-preview.png)");
-requireIncludes("README.en.md", readmeEn, "![Signal Garden desktop preview](assets/reference-skin/assets/signal-garden-preview.png)");
+requireEmptySection("README.md", readmeZh, "## 效果预览", "## 它能做什么");
+requireEmptySection("README.en.md", readmeEn, "## Preview", "## What It Does");
 
 requireIncludes("README.md", readmeZh, "不自动打开推广页面，不自动写入中转站配置");
 requireIncludes("README.en.md", readmeEn, "Promotion pages are not opened automatically, and API relay configuration is not written automatically");

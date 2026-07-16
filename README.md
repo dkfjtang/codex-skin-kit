@@ -12,14 +12,6 @@
 
 ## 效果预览
 
-![Signal Garden 主题样式预览](assets/reference-skin/assets/signal-garden-preview.png)
-
-Signal Garden 不是壁纸覆盖层。它在保留 Codex 原生布局和交互的前提下，增加一层轻量、可恢复的视觉样式。
-
-上图是基于当前 `signal-garden-skin.css` 生成的主题样式预览，用来说明这套皮肤的目标效果，不是当前工作区生成的 macOS 实机截图。
-
-后续使用第三方授权截图时，会明确标注为社区提供的运行参考图；只有通过 macOS 验证脚本实际生成的截图，才会标注为本项目实机验证截图。
-
 ## 它能做什么
 
 - 安装一套本地 Codex 皮肤目录到 `~/.codex/skills/codex-skin-kit-signal-garden`

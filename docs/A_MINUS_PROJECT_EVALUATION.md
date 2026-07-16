@@ -24,7 +24,7 @@ Included in A- v0.1.0:
 - Signal Garden reference skin;
 - macOS install, start, verify, restore, and uninstall scripts;
 - local-only CDP injection through `127.0.0.1`;
-- generated theme-style README preview;
+- empty README preview section until a reviewed image is available;
 - bilingual README with Chinese as the default entry;
 - ttflows as a support-service section, not a required runtime dependency;
 - static branding, screenshot, syntax, and metadata checks.
@@ -75,8 +75,8 @@ With a macOS environment:
 
 The repository is ready for a generated-preview A- static release draft. It is not yet ready to claim a real macOS runtime screenshot.
 
-The next decision is the README hero image mode:
+The next decision is the README preview section mode:
 
-- keep `generated` until a better asset exists;
+- keep `pending` until a better asset exists;
 - switch to `thirdParty` after completing `docs/SCREENSHOT_REVIEW.md`;
 - switch to `verified` only after macOS verification evidence is recorded.

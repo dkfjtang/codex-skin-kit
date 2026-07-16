@@ -26,8 +26,9 @@ The check currently covers:
 
 ## Screenshot Modes
 
-The README hero must be in exactly one mode:
+The README preview section must be in exactly one mode:
 
+- `pending`: the README preview section is intentionally empty;
 - `generated`: the current repository-generated theme-style preview;
 - `thirdParty`: a community-provided runtime reference screenshot with completed source, permission, and sensitive-content review;
 - `verified`: a real macOS runtime screenshot produced by this repository's verification script.
@@ -45,4 +46,4 @@ macOS runtime validation is separate from Windows static validation. On macOS, v
 ~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh
 ```
 
-Record runtime evidence in `docs/EXPERT_REVIEW.md` before describing the README hero as a verified runtime screenshot.
+Record runtime evidence in `docs/EXPERT_REVIEW.md` before describing the README preview section as a verified runtime screenshot.

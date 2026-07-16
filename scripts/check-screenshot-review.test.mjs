@@ -7,6 +7,10 @@ import { fileURLToPath } from "node:url";
 
 const checker = path.join(path.dirname(fileURLToPath(import.meta.url)), "check-screenshot-review.mjs");
 
+const pending = {
+  zh: "# Codex Skin Kit\n\n## 效果预览\n\n## 它能做什么\n",
+  en: "# Codex Skin Kit\n\n## Preview\n\n## What It Does\n",
+};
 const generated = {
   zh: "上图是基于当前 `signal-garden-skin.css` 生成的主题样式预览",
   en: "The image above is a theme-style preview generated from the current `signal-garden-skin.css`.",
@@ -19,6 +23,11 @@ const verified = {
   zh: "上图为 Signal Garden 在 macOS 官方 Codex 桌面版中的实际运行截图",
   en: "The image above is a real Signal Garden runtime screenshot captured on macOS",
 };
+
+const pendingReview = [
+  "- Hero image status: pending.",
+  "- Third-party screenshot: not provided yet.",
+].join("\n");
 
 const generatedReview = [
   "- Hero image status: generated theme-style preview.",
@@ -54,6 +63,14 @@ function runCase({ zh, en, screenshotReview, expertReview }) {
     fs.rmSync(root, { recursive: true, force: true });
   }
 }
+
+const pendingPass = runCase({
+  zh: pending.zh,
+  en: pending.en,
+  screenshotReview: pendingReview,
+  expertReview: "README preview section is intentionally empty",
+});
+assert.equal(pendingPass.status, 0, pendingPass.stderr);
 
 const generatedPass = runCase({
   zh: generated.zh,
@@ -106,4 +123,4 @@ const verifiedPass = runCase({
 });
 assert.equal(verifiedPass.status, 0, verifiedPass.stderr);
 
-console.log("Screenshot review gate tests passed (6 cases).");
+console.log("Screenshot review gate tests passed (7 cases).");

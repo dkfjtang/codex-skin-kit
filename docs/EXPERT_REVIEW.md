@@ -9,14 +9,14 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 - Review date: 2026-07-16.
 - Scope: README truth boundary, Signal Garden runtime assets, static verification, screenshot provenance, and support-service placement.
 - Runtime status: macOS live installation and CDP injection were not executed in this Windows workspace.
-- Screenshot status: the README currently uses a generated theme-style preview, not a locally verified runtime screenshot.
+- Screenshot status: the README preview section is intentionally empty, not a generated preview and not a locally verified runtime screenshot.
 
 ## Implementation Review
 
 - The repository contains real macOS shell scripts for install, launch, verify, restore, and uninstall flows.
 - The runtime uses local CDP injection through `127.0.0.1`; it does not modify the official app bundle, binary signature, or `app.asar`.
 - `Signal Garden` is implemented in `assets/reference-skin/assets/signal-garden-skin.css` and injected by `assets/reference-skin/assets/renderer-inject.js`.
-- The README image is currently a theme-style preview generated from the theme direction, not a macOS live runtime screenshot.
+- The README preview section is intentionally empty until a reviewed third-party image or verified macOS runtime screenshot is available.
 - Legacy money/cat presentation markers are prohibited by `scripts/check-branding.mjs`; the injected chrome now uses Signal Garden/local visual-layer wording.
 - The base Signal Garden CSS now uses the teal signal-grid palette directly instead of relying on old warm-color rules followed by later override rules.
 
@@ -44,9 +44,9 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 ## Cross-Check
 
 - Chinese and English READMEs describe the same install, start, verify, and restore commands.
-- The Chinese default README now contains an explicit preview image and states that it is generated, not a local macOS runtime capture.
+- The Chinese default README keeps the preview section empty and does not describe any image as a local macOS runtime capture.
 - `docs/RELEASE.md` requires provenance and permission review before a third-party screenshot can be published.
-- `docs/SCREENSHOT_REVIEW.md` is the required intake and rejection gate before replacing the README hero with a third-party screenshot.
+- `docs/SCREENSHOT_REVIEW.md` is the required intake and rejection gate before adding a third-party screenshot to the README preview section.
 - `scripts/check-screenshot-review.mjs` enforces that Chinese and English README screenshot wording use the same mode and that the selected mode has matching review evidence.
 - Runtime claims are cross-checked against `install-signal-garden-skin.sh`, `start-signal-garden-skin.sh`, `verify-signal-garden-skin.sh`, `restore-signal-garden-skin.sh`, and `injector.mjs`.
 
@@ -54,18 +54,18 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 
 - Required static command: `npm run check`.
 - Required screenshot gate command: `npm run check:screenshot`.
-- Required screenshot gate regression command: `npm run test:screenshot`; it covers generated preview success, bilingual mismatch failure, incomplete third-party review failure, completed third-party review success, missing macOS evidence failure, and verified runtime success.
+- Required screenshot gate regression command: `npm run test:screenshot`; it covers pending preview success, generated preview success, bilingual mismatch failure, incomplete third-party review failure, completed third-party review success, missing macOS evidence failure, and verified runtime success.
 - Required residue scan: `rg -n 'old theme signature|money symbol|paw marker' assets README.md README.en.md` should have no matches after translating those labels into the concrete legacy markers under review.
 - Required legacy-palette scan: `scripts/check-branding.mjs` blocks the old warm palette values and old theme wording; expected result is no matches outside the checker itself.
 - macOS install, injection, screenshot, and restore remain explicitly not executed.
 
 ## Recommendation
 
-Keep the existing reused runtime approach, but keep the README wording tied to proven behavior. Prefer replacing the generated theme-style preview with a real macOS verification screenshot once available. If a third-party screenshot is used as an interim hero image, treat it as a licensed reference asset, not as local verification evidence.
+Keep the existing reused runtime approach, but keep the README wording tied to proven behavior. Prefer adding a real macOS verification screenshot once available. If a third-party screenshot is used as an interim hero image, treat it as a licensed reference asset, not as local verification evidence.
 
 ## A- Static Closeout
 
-- README hero currently uses a generated theme-style preview with explicit wording.
+- README preview section is intentionally empty.
 - README capability claims match the install, start, verify, and restore scripts at the documentation level.
 - Static verification is enforced by `npm run check`.
 - Remote static verification is enforced by the `check` GitHub Actions workflow.
