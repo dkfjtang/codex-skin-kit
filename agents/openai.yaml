@@ -1,4 +1,0 @@
-interface:
-  display_name: "Codex Skin Kit"
-  short_description: "Build and apply local desktop themes maintained by TTFlows."
-  default_prompt: "Use $codex-skin-kit to create, install, verify, or restore a Codex Skin Kit theme."

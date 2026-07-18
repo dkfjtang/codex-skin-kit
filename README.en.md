@@ -1,133 +1,133 @@
-# Codex Skin Kit
+# Flowdeck
 
 <p align="center">
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-Windows-first Codex local skin toolkit, with macOS kept as a supported auxiliary path.
+<p align="center">
+  <strong>Give Codex a face that breathes.</strong><br>
+  External themes for the Codex desktop app · local CDP injection · no official package mutation
+</p>
 
-An installable, verifiable, and restorable local skin toolkit. Start with a theme and give your everyday coding surface a stable, reversible visual state.
+<p align="center">
+  A low-divergence downstream edition based on <a href="https://github.com/Fei-Away/Codex-Dream-Skin"><strong>Fei-Away/Codex-Dream-Skin</strong></a>.<br>
+  This repo focuses on Chinese-first docs, Windows/macOS entry points, support-service placement, and upstream attribution while keeping core skin logic close to upstream.
+</p>
 
-| Platform | Role | Current state |
-|---|---|---|
-| Windows | Mainline | PowerShell install, start, verify, and restore scripts are being used |
-| macOS | Auxiliary compatibility | Existing zsh scripts remain available |
-
-External theme / skin toolkit · local CDP injection · no official app package changes. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
-
-## Preview
-
-## What It Does
-
-- Windows mainline installs the local Codex skin directory at `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden`
-- Windows mainline creates desktop launch entries and injects CSS and decorative chrome into the official Codex desktop window through local `127.0.0.1` CDP
-- Windows mainline backs up and writes user-level `~/.codex/config.toml` appearance theme fields during install; the restore script can roll those fields back with `-RestoreBaseTheme`
-- Windows mainline uses PowerShell scripts to check injection state, export a screenshot, stop the injector process, and clean up launch entries
-- macOS retains the existing zsh scripts, desktop launchers, and restore flow as an auxiliary compatibility path
-- It does not read chats, cookies, tokens, or API keys, and does not automatically change model providers, Base URL, or proxy settings
-
-## Quick Start
-
-### Windows mainline
-
-Requirements: Windows 11, the official Codex desktop app, PowerShell 7 or built-in Windows PowerShell, and Node.js 18 or later. The scripts look for the official app automatically, or you can point them at a specific executable path.
-
-```powershell
-git clone https://github.com/dkfjtang/codex-skin-kit.git
-cd codex-skin-kit\assets\reference-skin
-powershell -ExecutionPolicy Bypass -File scripts\install-signal-garden-skin.ps1
-```
-
-The installer copies the full theme to `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden` and creates these desktop launchers:
-
-- `Signal Garden.cmd`
-- `Signal Garden - Restore.cmd`
-
-Launch the theme:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\start-signal-garden-skin.ps1 -RestartExisting
-```
-
-Verify the theme and capture a screenshot:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\verify-signal-garden-skin.ps1 -Screenshot "$env:USERPROFILE\Desktop\codex-skin-kit-signal-garden-check.png"
-```
-
-Restore or uninstall:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1
-powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1 -RestoreBaseTheme -Uninstall
-```
-
-Running `restore-signal-garden-skin.ps1` by itself stops injection and clears the current skin effect. Adding `-RestoreBaseTheme` writes the pre-install appearance-theme backup back to `%USERPROFILE%\.codex\config.toml`.
-
-### macOS auxiliary path
-
-The existing zsh scripts remain available for macOS install, verify, and restore runs:
-
-```zsh
-cd codex-skin-kit/assets/reference-skin
-/bin/zsh scripts/install-signal-garden-skin.sh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/start-signal-garden-skin.sh --restart-existing
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh --restore-base-theme --uninstall
-```
-
-> Windows is the mainline path; macOS stays as a supported auxiliary compatibility path and for runtime re-verification.
-
-## Custom Skins
-
-The repository keeps the theme scaffolding workflow. You can generate a standalone theme package from one image and one GIF. The scaffold copies the runtime scripts, replaces the theme name/slug, and creates an installable skin directory; it does not guarantee that every image will produce a perfect layout, so installation and screenshot verification are still recommended.
-
-```zsh
-python3 scripts/scaffold_skin.py \
-  --name "My Codex Skin" \
-  --slug "codex-skin-kit-my-theme" \
-  --description "A custom Codex desktop skin" \
-  --source /absolute/path/source.png \
-  --gif /absolute/path/hero.gif \
-  --output /absolute/path/codex-skin-kit-my-theme
-```
-
-Use only images that you own or assets that are explicitly licensed for redistribution. Do not submit anime characters, public-figure photos, commercial logos, wallpapers with unclear origins, or images that may infringe third-party rights.
-
-## Safety Boundaries
-
-> This is not an official OpenAI project. It does not modify, replace, or re-sign the official app, and it does not modify `app.asar`. OpenAI, Codex, ChatGPT, and related names and marks belong to their respective owners.
-
-- CDP must bind only to `127.0.0.1` and must not be exposed to LAN interfaces
-- Decorative injected elements keep `pointer-events: none`
-- The official app is not modified, unpacked, or re-signed
-- Chats, account credentials, cookies, tokens, and API keys are not read
-- Promotion pages are not opened automatically, and API relay configuration is not written automatically
-- If adaptation fails, the original app should remain unchanged and cleanup should be available through the restore script
+<p align="center">
+  Unofficial. Does not modify <code>.app</code> / <code>app.asar</code> / WindowsApps.
+</p>
 
 ## Support Service
 
 <p align="center">
   <a href="https://api.ttflows.com/">
-    <img src="assets/brand/ttflows-logo.png" alt="ttflows 天梯流" width="132">
+    <img src="assets/brand/ttflows-logo.png" alt="ttflows 天梯流" height="72">
   </a>
 </p>
 
 <p align="center">
   <strong>ttflows 天梯流</strong><br>
-  A one-stop AI API service platform for simple, stable model access in AI clients and developer tools.
+  <sub>One-stop AI API service platform · simple integration · transparent pricing · continuous improvement</sub>
 </p>
 
 <p align="center">
   <a href="https://api.ttflows.com/"><strong>Visit ttflows 天梯流 →</strong></a>
 </p>
 
-Codex Skin Kit is a free third-party project. Its ongoing maintenance and experience testing are supported by ttflows 天梯流.
-
 ttflows 天梯流 is a one-stop AI API service platform that brings together multiple mainstream large models, supports OpenAI API and Anthropic API interfaces, works with many AI clients and developer tools, keeps pricing transparent, makes integration simple, and continues to improve for developers and AI enthusiasts.
 
-Using ttflows is optional and not required for any skin feature. This project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
+Theme install and API configuration stay separate. Using ttflows is optional and not required for any skin feature; this project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
+
+## Upstream
+
+Flowdeck is a light downstream edition of [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin). The upstream project provides the main Windows/macOS skin scripts, theme injection, presets, verification, and restore flows.
+
+Maintenance policy:
+
+- Keep core scripts close to upstream
+- Keep local changes mostly in README, support-service copy, attribution files, and small brand assets
+- Prefer syncing future features from upstream instead of building a separate long-term fork
+- Preserve upstream authors, contributors, license, and source information in public files
+
+## Tested Featured Presets
+
+### Gothic Void Crusade
+
+One of the upstream tested featured presets, switchable through the bundled theme scripts.
+
+<p align="center">
+  <img src="docs/images/presets/gothic-void-crusade-preview.jpg" alt="Gothic Void Crusade theme running in Codex" width="900"><br>
+  <sub>Real injected Codex home screen from upstream preview</sub>
+</p>
+
+### Arina Hashimoto
+
+This preset comes from the upstream repository. The sidebar, cards, project picker, and composer shown below are native Codex controls. Confirm likeness, asset, and trademark rights before public or commercial redistribution.
+
+<p align="center">
+  <img src="docs/images/presets/arina-hashimoto-light.jpg" alt="Arina Hashimoto theme tested in light appearance" width="900"><br>
+  <sub>Light · real injected screenshot from upstream preview</sub>
+</p>
+
+<p align="center">
+  <img src="docs/images/presets/arina-hashimoto-dark.jpg" alt="Arina Hashimoto theme tested in dark appearance" width="900"><br>
+  <sub>Dark · real injected screenshot from upstream preview</sub>
+</p>
+
+## What It Does
+
+- **Real UI**: Sidebar, cards, project picker, and input stay native. Not a fake full-window screenshot.
+- **Continuous wallpaper**: One 16:9 image spans the full window while native content stays readable.
+- **Swappable art**: Drop in a UI-free image you like and turn it into a theme.
+- **Saved themes**: Switch local themes from the macOS menu bar or Windows system tray.
+- **Restorable**: One-click restore to the stock look.
+- **Safer path**: Local-loopback CDP injection only. No official binary or signature changes.
+
+## Quick Start
+
+| Platform | Dir | Entry |
+|------|------|------|
+| Windows | [`windows/`](./windows/) | `scripts/install-dream-skin.ps1` → `start-dream-skin.ps1` |
+| Apple Silicon / Intel Mac | [`macos/`](./macos/) | Double-click `Install Codex Dream Skin.command` |
+
+Windows:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\windows\scripts\install-dream-skin.ps1
+powershell -ExecutionPolicy Bypass -File .\windows\scripts\start-dream-skin.ps1
+```
+
+macOS:
+
+```bash
+cd macos
+./scripts/install-dream-skin-macos.sh --no-launch
+./scripts/start-dream-skin-macos.sh
+```
+
+More:
+
+- Windows: [`windows/README.md`](./windows/README.md)
+- macOS: [`macos/README.md`](./macos/README.md)
+- Paths: [`docs/platforms.md`](./docs/platforms.md)
+- Reference prompt guide: [`docs/reference-background-prompt-guide.en.md`](./docs/reference-background-prompt-guide.en.md)
+- Project notes: [`docs/PROJECT.md`](./docs/PROJECT.md)
+
+## Safety
+
+- CDP binds `127.0.0.1` only
+- Does not touch the official install directory, official binary, code signature, or `app.asar`
+- Does not write API Key / Base URL / proxy / model-provider configuration
+- Theme features and relay services stay separate
 
 ## License
 
-Codex Skin Kit is released under the MIT License. Third-party notices are available in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
+- Based on [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin), under the upstream MIT license
+- See [`macos/LICENSE`](./macos/LICENSE), [`NOTICE.md`](./NOTICE.md), and [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md)
+- Unofficial; Codex, OpenAI, ChatGPT, and related names belong to their owners
+- People / IP material in bundled presets and previews is illustrative only; confirm rights before public or commercial redistribution
+
+---
+
+Pick a look and make Codex yours for today.

@@ -1,13 +1,15 @@
 # Third-Party Notices
 
-This project includes software derived from Codex Skin Builder, licensed under the MIT License.
+This repository incorporates design, code structure, and theme concepts from
+[Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin),
+which is licensed under MIT.
 
-Original copyright notice:
+The following items remain subject to their original rights holders:
 
-```text
-Copyright (c) 2026 Codex Skin Builder contributors
-```
+- OpenAI, Codex, and ChatGPT names, logos, and trade dress
+- Any user-supplied or maintainer-supplied character, person, IP, or brand
+  imagery included in theme previews or presets
+- Any external artwork or assets not authored for this repository
 
-The original MIT License text is preserved in this repository. Codex Skin Kit keeps this notice for license compliance while presenting Codex Skin Kit and TTFlows as the user-facing project and maintainer brand.
+See [`NOTICE.md`](./NOTICE.md) for additional usage notes.
 
-No third-party character artwork, celebrity imagery, commercial logos, or previous promotional materials from upstream repositories are intentionally included in Codex Skin Kit. The bundled Signal Garden preview assets are original abstract assets generated for this repository.
