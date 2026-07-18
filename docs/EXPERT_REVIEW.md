@@ -8,12 +8,12 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 
 - Review date: 2026-07-16.
 - Scope: README truth boundary, Signal Garden runtime assets, static verification, screenshot provenance, and support-service placement.
-- Runtime status: macOS live installation and CDP injection were not executed in this Windows workspace.
+- Runtime status: Windows PowerShell scripts are present and syntax-checked; live Windows installation and CDP injection have not been executed with the official desktop app.
 - Screenshot status: the README preview section is intentionally empty, not a generated preview and not a locally verified runtime screenshot.
 
 ## Implementation Review
 
-- The repository contains real macOS shell scripts for install, launch, verify, restore, and uninstall flows.
+- The repository contains Windows PowerShell scripts and retained macOS shell scripts for install, launch, verify, restore, and uninstall flows.
 - The runtime uses local CDP injection through `127.0.0.1`; it does not modify the official app bundle, binary signature, or `app.asar`.
 - `Signal Garden` is implemented in `assets/reference-skin/assets/signal-garden-skin.css` and injected by `assets/reference-skin/assets/renderer-inject.js`.
 - The README preview section is intentionally empty until a reviewed third-party image or verified macOS runtime screenshot is available.
@@ -24,13 +24,19 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 
 - Static verification is covered by `npm run check`, including branding scan, README structure scan, screenshot gate checks, Python syntax compilation, JavaScript syntax checks, and `skin.json` parsing.
 - Remote static verification is covered by `.github/workflows/check.yml`, which runs `npm run check` on `main` pushes and pull requests.
-- Runtime verification is designed for macOS with the official Codex desktop app and should use:
+Runtime verification is designed for Windows first with the official Codex desktop app and should use:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\verify-signal-garden-skin.ps1 -Screenshot "$env:USERPROFILE\Desktop\codex-skin-kit-signal-garden-check.png"
+```
+
+macOS auxiliary verification remains available:
 
 ```zsh
 ~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
 ```
 
-- A real macOS screenshot has not been produced in this Windows workspace. README must not call the generated preview a real runtime screenshot until that verification is completed.
+- A real Windows or macOS screenshot has not been produced in this workspace. README must not call the empty preview a real runtime screenshot until platform verification is completed.
 - If a third-party screenshot is used before local macOS verification is available, README must describe it as a community-provided runtime reference screenshot. The source, reuse permission, sensitive-content check, and lack of local re-verification must be recorded before publishing.
 
 ## Operations And Safety Review
@@ -43,7 +49,7 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 
 ## Cross-Check
 
-- Chinese and English READMEs describe the same install, start, verify, and restore commands.
+- Chinese and English READMEs describe the same Windows-first install, start, verify, and restore commands, with macOS retained as an auxiliary path.
 - The Chinese default README keeps the preview section empty and does not describe any image as a local macOS runtime capture.
 - `docs/RELEASE.md` requires provenance and permission review before a third-party screenshot can be published.
 - `docs/SCREENSHOT_REVIEW.md` is the required intake and rejection gate before adding a third-party screenshot to the README preview section.
@@ -57,6 +63,7 @@ Project evaluation and schedule are recorded in `docs/A_MINUS_PROJECT_EVALUATION
 - Required screenshot gate regression command: `npm run test:screenshot`; it covers pending preview success, generated preview success, bilingual mismatch failure, incomplete third-party review failure, completed third-party review success, missing macOS evidence failure, and verified runtime success.
 - Required residue scan: `rg -n 'old theme signature|money symbol|paw marker' assets README.md README.en.md` should have no matches after translating those labels into the concrete legacy markers under review.
 - Required legacy-palette scan: `scripts/check-branding.mjs` blocks the old warm palette values and old theme wording; expected result is no matches outside the checker itself.
+- Windows live install, injection, screenshot, and restore remain explicitly not executed with the official desktop app.
 - macOS install, injection, screenshot, and restore remain explicitly not executed.
 
 ## Recommendation
@@ -71,8 +78,9 @@ Keep the existing reused runtime approach, but keep the README wording tied to p
 - Remote static verification is enforced by the `check` GitHub Actions workflow.
 - Screenshot wording is enforced by `scripts/check-screenshot-review.mjs` and regression-tested by `scripts/check-screenshot-review.test.mjs`.
 - Support-service placement remains secondary to the skin tool and is not required for runtime features.
-- macOS live validation and screenshot capture remain not executed in this Windows workspace.
-- Final A- screenshot closeout requires either macOS verification evidence or a completed third-party screenshot review record.
+- Windows live validation and screenshot capture remain not executed with the official desktop app.
+- macOS live validation and screenshot capture remain not executed.
+- Final A- screenshot closeout requires either Windows/macOS verification evidence or a completed third-party screenshot review record.
 
 ## Review Follow-Up
 

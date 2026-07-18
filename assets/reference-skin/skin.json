@@ -5,14 +5,29 @@
   "version": "1.0.0",
   "author": "TTFlows",
   "description": "Original abstract signal-grid theme with reversible loopback-only CDP injection.",
-  "platforms": ["macos"],
+  "platforms": ["windows", "macos"],
+  "mainPlatform": "windows",
   "preview": "assets/signal-garden-source.png",
   "animatedHero": "assets/signal-garden-hero.gif",
   "scripts": {
-    "install": "scripts/install-signal-garden-skin.sh",
-    "activate": "scripts/start-signal-garden-skin.sh",
-    "deactivate": "scripts/restore-signal-garden-skin.sh",
-    "verify": "scripts/verify-signal-garden-skin.sh"
+    "install": "scripts/install-signal-garden-skin.ps1",
+    "activate": "scripts/start-signal-garden-skin.ps1",
+    "deactivate": "scripts/restore-signal-garden-skin.ps1",
+    "verify": "scripts/verify-signal-garden-skin.ps1"
+  },
+  "platformScripts": {
+    "windows": {
+      "install": "scripts/install-signal-garden-skin.ps1",
+      "activate": "scripts/start-signal-garden-skin.ps1",
+      "deactivate": "scripts/restore-signal-garden-skin.ps1",
+      "verify": "scripts/verify-signal-garden-skin.ps1"
+    },
+    "macos": {
+      "install": "scripts/install-signal-garden-skin.sh",
+      "activate": "scripts/start-signal-garden-skin.sh",
+      "deactivate": "scripts/restore-signal-garden-skin.sh",
+      "verify": "scripts/verify-signal-garden-skin.sh"
+    }
   },
   "requirements": {
     "node": ">=18",

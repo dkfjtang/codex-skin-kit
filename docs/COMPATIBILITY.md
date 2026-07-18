@@ -1,21 +1,29 @@
 # Compatibility
 
-Codex Skin Kit v0.1.0 is scoped to macOS desktop application builds that expose Chromium DevTools Protocol targets on `127.0.0.1` when launched with a local debugging port.
+Codex Skin Kit v0.1.0 is moving to a Windows-first runtime path while retaining the existing macOS scripts as an auxiliary compatibility path.
 
-Windows support is not claimed in this release. Do not publish Windows installation instructions until a Windows implementation and restore path are verified.
+## Platform Scope
 
-Compatibility must be rechecked after target desktop application upgrades because DOM structure and class names may change.
+| Platform | Status | Notes |
+|---|---|---|
+| Windows | Mainline | PowerShell install, start, verify, and restore scripts are included. |
+| macOS | Auxiliary compatibility | Existing zsh scripts remain available and must not be deleted. |
 
-## Claimed Runtime
+Both paths use loopback-only Chromium DevTools Protocol targets on `127.0.0.1`.
 
-The current release only claims the repository structure and scripts needed for macOS Codex desktop skinning. A passing Windows `npm run check` confirms static integrity, not live desktop compatibility.
+## Validation Boundary
+
+Passing `npm run check` proves static integrity, README structure, screenshot-mode consistency, JavaScript/Python syntax, and PowerShell syntax when PowerShell is available.
+
+It does not prove live desktop injection unless install/start/verify/restore is run on the target platform with the official desktop app.
 
 ## Recheck Triggers
 
-Re-run macOS install/start/verify/restore validation when any of these changes:
+Re-run platform validation when any of these changes:
 
 - the official desktop app version;
 - Chromium DevTools Protocol launch behavior;
-- app bundle identifier or launch path;
+- Windows executable path discovery;
+- macOS app bundle identifier or launch path;
 - DOM structure used by the injected CSS or renderer bridge;
 - screenshot, restore, or launcher scripts.

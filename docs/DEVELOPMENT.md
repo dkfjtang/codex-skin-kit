@@ -20,6 +20,7 @@ The check currently covers:
 - README section order, Chinese-default entry, support-service placement, and ttflows wording;
 - README screenshot-mode consistency;
 - screenshot review-gate regression cases;
+- PowerShell syntax checks for Windows mainline scripts when PowerShell is available;
 - Python syntax checks for helper scripts;
 - JavaScript syntax checks for the injector and renderer bridge;
 - `skin.json` JSON parsing.
@@ -37,7 +38,16 @@ Do not mix these modes in README wording. If a third-party image is used, comple
 
 ## Runtime Validation
 
-macOS runtime validation is separate from Windows static validation. On macOS, validate the full path:
+Windows is the mainline runtime path. Validate it with the official desktop app before claiming live Windows support:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\install-signal-garden-skin.ps1
+powershell -ExecutionPolicy Bypass -File scripts\start-signal-garden-skin.ps1 -RestartExisting
+powershell -ExecutionPolicy Bypass -File scripts\verify-signal-garden-skin.ps1 -Screenshot "$env:USERPROFILE\Desktop\codex-skin-kit-signal-garden-check.png"
+powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1 -RestoreBaseTheme -Uninstall
+```
+
+macOS remains an auxiliary compatibility path:
 
 ```zsh
 /bin/zsh scripts/install-signal-garden-skin.sh

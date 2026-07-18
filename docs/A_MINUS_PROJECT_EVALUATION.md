@@ -22,7 +22,8 @@ B+ would be the fastest way to publish a repository, but it would keep the main 
 Included in A- v0.1.0:
 
 - Signal Garden reference skin;
-- macOS install, start, verify, restore, and uninstall scripts;
+- Windows install, start, verify, restore, and uninstall scripts;
+- macOS install, start, verify, restore, and uninstall scripts retained as auxiliary compatibility;
 - local-only CDP injection through `127.0.0.1`;
 - empty README preview section until a reviewed image is available;
 - bilingual README with Chinese as the default entry;
@@ -31,7 +32,7 @@ Included in A- v0.1.0:
 
 Not included in A- v0.1.0:
 
-- Windows runtime support;
+- verified Windows runtime evidence with the official desktop app;
 - a verified macOS runtime screenshot from this Windows workspace;
 - automatic ttflows account, Base URL, proxy, or model-provider setup;
 - multi-theme marketplace or theme manager behavior.
@@ -47,7 +48,7 @@ Implementation view:
 Verification view:
 
 - `npm run check` is the required local gate.
-- Windows static checks do not prove macOS installation or live CDP injection.
+- Windows static checks and PowerShell syntax checks do not prove live desktop injection.
 - A third-party screenshot can be used only as a community-provided runtime reference screenshot after source, permission, and sensitive-content checks are recorded.
 
 Operations and security view:
@@ -59,11 +60,17 @@ Operations and security view:
 
 ## Schedule
 
-Without a self-owned macOS environment:
+Without a self-owned runtime environment:
 
 - code and document credibility pass: completed for the current A- static state;
 - third-party screenshot intake and README replacement: 0.25-0.5 workday after a usable screenshot, source, and permission evidence are provided;
 - final release notes and tag/archive preparation: 0.5 workday after the screenshot decision.
+
+With a Windows runtime environment:
+
+- install/start/verify/restore validation: 0.5 workday;
+- real screenshot replacement and expert-review update: 0.5 workday;
+- release notes and tag/archive preparation: 0.5 workday.
 
 With a macOS environment:
 
@@ -73,7 +80,7 @@ With a macOS environment:
 
 ## Current State
 
-The repository is ready for a generated-preview A- static release draft. It is not yet ready to claim a real macOS runtime screenshot.
+The repository is ready for a Windows-first A- static release draft. It is not yet ready to claim a real Windows or macOS runtime screenshot.
 
 The next decision is the README preview section mode:
 

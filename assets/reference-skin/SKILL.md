@@ -1,18 +1,25 @@
 ---
 name: codex-skin-kit-signal-garden
-description: Apply, launch, verify, update, or restore the Signal Garden theme for the macOS desktop app. Use when the user wants an abstract TTFlows signal-grid visual layer, update-safe CDP reinjection, or a safe rollback without modifying app.asar.
+description: Apply, launch, verify, update, or restore the Signal Garden theme for the Windows-first Codex desktop skin path, with macOS compatibility scripts retained. Use when the user wants an abstract signal-grid visual layer, loopback-only CDP reinjection, or a safe rollback without modifying app.asar.
 ---
 
 # Signal Garden
 
-Apply a reversible animated renderer theme through Chromium DevTools Protocol while launching the official app discovered by Bundle ID `com.openai.codex`. Never modify or re-sign the official application bundle or `app.asar`.
+Apply a reversible animated renderer theme through Chromium DevTools Protocol. Windows is the mainline path; macOS scripts remain available as an auxiliary compatibility path. Never modify or re-sign the official application bundle, executable, or `app.asar`.
 
-## Commands
+## Windows Mainline
 
-1. Run `scripts/install-signal-garden-skin.sh` once. It installs the complete skill under `~/.codex/skills/codex-skin-kit-signal-garden`, sets matching base colors, and creates desktop launch/restore apps.
+1. Run `scripts/install-signal-garden-skin.ps1` once. It installs the complete skill under `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden`, backs up appearance theme settings, and creates desktop command launchers.
+2. Run `scripts/start-signal-garden-skin.ps1`; add `-RestartExisting` only when restarting an open app is authorized.
+3. Run `scripts/verify-signal-garden-skin.ps1 -Screenshot <absolute-path>` and inspect against `references/qa-inventory.md`.
+4. Run `scripts/restore-signal-garden-skin.ps1` for live removal. Add `-Uninstall` to delete launchers and `-RestoreBaseTheme` to restore backed-up appearance theme fields.
+
+## macOS Auxiliary Path
+
+1. Run `scripts/install-signal-garden-skin.sh` once.
 2. Run `scripts/start-signal-garden-skin.sh`; add `--restart-existing` only when restarting an open app is authorized.
-3. Run `scripts/verify-signal-garden-skin.sh --screenshot <absolute-path>` and inspect against `references/qa-inventory.md`.
-4. Run `scripts/restore-signal-garden-skin.sh` for live removal. Add `--uninstall` to delete launchers and `--restore-base-theme` to restore backed-up base colors.
+3. Run `scripts/verify-signal-garden-skin.sh --screenshot <absolute-path>`.
+4. Run `scripts/restore-signal-garden-skin.sh`; add `--uninstall` and `--restore-base-theme` when needed.
 
 ## Rules
 

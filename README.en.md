@@ -4,9 +4,14 @@
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-Make Codex desktop easier on the eyes and closer to your own workspace.
+Windows-first Codex local skin toolkit, with macOS kept as a supported auxiliary path.
 
-An installable, verifiable, and restorable local skin toolkit. Start with an image and give your everyday coding surface a stable, reversible visual state.
+An installable, verifiable, and restorable local skin toolkit. Start with a theme and give your everyday coding surface a stable, reversible visual state.
+
+| Platform | Role | Current state |
+|---|---|---|
+| Windows | Mainline | PowerShell install, start, verify, and restore scripts are being used |
+| macOS | Auxiliary compatibility | Existing zsh scripts remain available |
 
 External theme / skin toolkit · local CDP injection · no official app package changes. The first theme, **Signal Garden**, uses original abstract signal-grid visuals while keeping the native sidebar, project picker, feature cards, input box, and task content intact.
 
@@ -14,54 +19,64 @@ External theme / skin toolkit · local CDP injection · no official app package 
 
 ## What It Does
 
-- Installs a local Codex skin directory at `~/.codex/skills/codex-skin-kit-signal-garden`
-- Creates `Signal Garden.app` and `Signal Garden - Restore.app` desktop launchers
-- Injects CSS and decorative chrome into the official Codex desktop window through local `127.0.0.1` CDP
-- Keeps the native Codex DOM and interactions instead of covering the window with a screenshot or replacing the app package
-- Backs up and writes user-level `~/.codex/config.toml` appearance theme fields during install; the restore script can roll those fields back with `--restore-base-theme`
-- Uses `verify-signal-garden-skin.sh` to check injection state and optionally export a screenshot
-- Uses `restore-signal-garden-skin.sh` to remove the skin, stop the injector process, and optionally uninstall launchers
-- Does not read chats, cookies, tokens, or API keys, and does not automatically change model providers, Base URL, or proxy settings
+- Windows mainline installs the local Codex skin directory at `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden`
+- Windows mainline creates desktop launch entries and injects CSS and decorative chrome into the official Codex desktop window through local `127.0.0.1` CDP
+- Windows mainline backs up and writes user-level `~/.codex/config.toml` appearance theme fields during install; the restore script can roll those fields back with `-RestoreBaseTheme`
+- Windows mainline uses PowerShell scripts to check injection state, export a screenshot, stop the injector process, and clean up launch entries
+- macOS retains the existing zsh scripts, desktop launchers, and restore flow as an auxiliary compatibility path
+- It does not read chats, cookies, tokens, or API keys, and does not automatically change model providers, Base URL, or proxy settings
 
 ## Quick Start
 
-Requirements: macOS 12 or later, the official Codex desktop app, and Node.js 18 or later. The scripts look for the official app with Bundle ID `com.openai.codex` and bind only to a local `127.0.0.1` debugging port.
+### Windows mainline
 
-```zsh
+Requirements: Windows 11, the official Codex desktop app, PowerShell 7 or built-in Windows PowerShell, and Node.js 18 or later. The scripts look for the official app automatically, or you can point them at a specific executable path.
+
+```powershell
 git clone https://github.com/dkfjtang/codex-skin-kit.git
-cd codex-skin-kit/assets/reference-skin
-/bin/zsh scripts/install-signal-garden-skin.sh
+cd codex-skin-kit\assets\reference-skin
+powershell -ExecutionPolicy Bypass -File scripts\install-signal-garden-skin.ps1
 ```
 
-The installer copies the full theme to `~/.codex/skills/codex-skin-kit-signal-garden` and creates these desktop launchers:
+The installer copies the full theme to `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden` and creates these desktop launchers:
 
-- `Signal Garden.app`
-- `Signal Garden - Restore.app`
-
-The installer also backs up the current `~/.codex/config.toml` into the skin state directory and writes Codex appearance-theme fields so the desktop app can load Signal Garden's base theme settings. This configuration change is limited to appearance fields; it does not write model, Base URL, proxy, or API key settings.
+- `Signal Garden.cmd`
+- `Signal Garden - Restore.cmd`
 
 Launch the theme:
 
-```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/start-signal-garden-skin.sh --restart-existing
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\start-signal-garden-skin.ps1 -RestartExisting
 ```
 
 Verify the theme and capture a screenshot:
 
-```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\verify-signal-garden-skin.ps1 -Screenshot "$env:USERPROFILE\Desktop\codex-skin-kit-signal-garden-check.png"
 ```
 
 Restore or uninstall:
 
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1
+powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1 -RestoreBaseTheme -Uninstall
+```
+
+Running `restore-signal-garden-skin.ps1` by itself stops injection and clears the current skin effect. Adding `-RestoreBaseTheme` writes the pre-install appearance-theme backup back to `%USERPROFILE%\.codex\config.toml`.
+
+### macOS auxiliary path
+
+The existing zsh scripts remain available for macOS install, verify, and restore runs:
+
 ```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh
+cd codex-skin-kit/assets/reference-skin
+/bin/zsh scripts/install-signal-garden-skin.sh
+~/.codex/skills/codex-skin-kit-signal-garden/scripts/start-signal-garden-skin.sh --restart-existing
+~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
 ~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh --restore-base-theme --uninstall
 ```
 
-Running `restore-signal-garden-skin.sh` by itself stops injection and clears the current skin effect. Adding `--restore-base-theme` writes the pre-install appearance-theme backup back to `~/.codex/config.toml`.
-
-> The first run may require closing existing Codex windows or explicitly using `--restart-existing`. Do not restart an active user window without permission.
+> Windows is the mainline path; macOS stays as a supported auxiliary compatibility path and for runtime re-verification.
 
 ## Custom Skins
 

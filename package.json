@@ -6,8 +6,9 @@
     "license":  "MIT",
     "private":  false,
     "scripts":  {
-                    "check":  "node scripts/check-branding.mjs \u0026\u0026 node scripts/check-readme-structure.mjs \u0026\u0026 node scripts/check-screenshot-review.mjs \u0026\u0026 node scripts/check-screenshot-review.test.mjs \u0026\u0026 python -m py_compile scripts/scaffold_skin.py scripts/render_readme_preview.py \u0026\u0026 node --check assets/reference-skin/scripts/injector.mjs \u0026\u0026 node --check assets/reference-skin/assets/renderer-inject.js \u0026\u0026 node -e \"JSON.parse(require(\u0027fs\u0027).readFileSync(\u0027assets/reference-skin/skin.json\u0027,\u0027utf8\u0027))\"",
+                    "check":  "node scripts/check-branding.mjs \u0026\u0026 node scripts/check-readme-structure.mjs \u0026\u0026 node scripts/check-screenshot-review.mjs \u0026\u0026 node scripts/check-screenshot-review.test.mjs \u0026\u0026 node scripts/check-powershell-syntax.mjs \u0026\u0026 python -m py_compile scripts/scaffold_skin.py scripts/render_readme_preview.py \u0026\u0026 node --check assets/reference-skin/scripts/injector.mjs \u0026\u0026 node --check assets/reference-skin/assets/renderer-inject.js \u0026\u0026 node -e \"JSON.parse(require(\u0027fs\u0027).readFileSync(\u0027assets/reference-skin/skin.json\u0027,\u0027utf8\u0027))\"",
                     "check:branding":  "node scripts/check-branding.mjs",
+                    "check:powershell":  "node scripts/check-powershell-syntax.mjs",
                     "check:readme":  "node scripts/check-readme-structure.mjs",
                     "check:screenshot":  "node scripts/check-screenshot-review.mjs",
                     "test:screenshot":  "node scripts/check-screenshot-review.test.mjs"

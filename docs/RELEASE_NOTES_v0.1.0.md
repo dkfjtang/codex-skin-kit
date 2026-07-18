@@ -9,7 +9,8 @@ This release positions the repository as a real, reversible local Codex skin too
 ## Included
 
 - Signal Garden reference skin assets and runtime scripts.
-- macOS install, start, verify, restore, and uninstall paths.
+- Windows install, start, verify, restore, and uninstall paths.
+- macOS install, start, verify, restore, and uninstall paths retained as auxiliary compatibility.
 - Install-time backup and appearance-theme write for `~/.codex/config.toml`, with `--restore-base-theme` rollback documentation.
 - Local-only CDP injection through `127.0.0.1`.
 - Theme scaffolding helper for generating a standalone skin package from owned or redistributable assets.
@@ -46,7 +47,8 @@ Hosted verification must pass for the exact release commit before publication. R
 
 - Current README preview section: empty.
 - Current screenshot mode: `pending`.
-- macOS runtime screenshot: not produced in this Windows workspace.
+- Windows runtime screenshot: not produced with the official desktop app yet.
+- macOS runtime screenshot: not produced in this workspace.
 - Third-party screenshot: not provided yet.
 - Publication gate for a third-party screenshot: `docs/SCREENSHOT_REVIEW.md`.
 
@@ -54,14 +56,18 @@ Do not describe an empty preview section, generated preview, or third-party refe
 
 ## Runtime Validation Status
 
-Not executed in this Windows workspace:
+Not executed with the official desktop app yet:
 
+- Windows install with `install-signal-garden-skin.ps1`.
+- Windows start with `start-signal-garden-skin.ps1`.
+- Windows screenshot capture with `verify-signal-garden-skin.ps1 -Screenshot`.
+- Windows restore with `restore-signal-garden-skin.ps1`.
 - macOS install with `install-signal-garden-skin.sh`.
 - macOS start with `start-signal-garden-skin.sh`.
 - macOS screenshot capture with `verify-signal-garden-skin.sh --screenshot`.
 - macOS restore with `restore-signal-garden-skin.sh`.
 
-Release notes for a public GitHub Release must state this clearly unless a macOS verification record is added before publication.
+Release notes for a public GitHub Release must state this clearly unless a Windows or macOS verification record is added before publication.
 
 ## Security And Operations Notes
 

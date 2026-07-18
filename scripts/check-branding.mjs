@@ -2,12 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const textExtensions = new Set([".md", ".json", ".yaml", ".yml", ".sh", ".mjs", ".js", ".cjs", ".css", ".toml", ".txt", ".py"]);
+const textExtensions = new Set([".md", ".json", ".yaml", ".yml", ".sh", ".ps1", ".mjs", ".js", ".cjs", ".css", ".toml", ".txt", ".py"]);
 const skippedFiles = new Set(["scripts/check-branding.mjs", "scripts/check-readme-structure.mjs"]);
 const allowed = new Map([
   ["Codex Skin Builder", new Set(["LICENSE", "THIRD_PARTY_NOTICES.md"])],
   ["Codex Skin Builder contributors", new Set(["LICENSE", "THIRD_PARTY_NOTICES.md"])],
-  ["OpenAI", new Set(["README.md", "README.en.md", "NOTICE.md", "SECURITY.md", "SPONSORSHIP.md", "assets/reference-skin/SKILL.md", "references/runtime-architecture.md"])],
+  ["OpenAI", new Set(["README.md", "README.en.md", "NOTICE.md", "SECURITY.md", "SPONSORSHIP.md", "assets/reference-skin/SKILL.md", "assets/reference-skin/scripts/lib.ps1", "references/runtime-architecture.md"])],
   ["ChatGPT", new Set(["README.md", "README.en.md", "NOTICE.md", "references/runtime-architecture.md", "assets/reference-skin/references/runtime-notes.md", "assets/reference-skin/scripts/lib.sh"])],
   ["Anthropic", new Set(["README.md", "README.en.md", "NOTICE.md", "SPONSORSHIP.md"])],
   ["Claude", new Set(["NOTICE.md"])],
@@ -81,12 +81,18 @@ const required = [
   "docs/SCREENSHOT_REVIEW.md",
   "docs/RELEASE_NOTES_v0.1.0.md",
   "scripts/check-readme-structure.mjs",
+  "scripts/check-powershell-syntax.mjs",
   "scripts/check-screenshot-review.mjs",
   "scripts/check-screenshot-review.test.mjs",
   "assets/brand/ttflows-logo.png",
   "assets/reference-skin/preview.html",
   "assets/reference-skin/assets/signal-garden-source.png",
-  "assets/reference-skin/assets/signal-garden-hero.gif"
+  "assets/reference-skin/assets/signal-garden-hero.gif",
+  "assets/reference-skin/scripts/lib.ps1",
+  "assets/reference-skin/scripts/install-signal-garden-skin.ps1",
+  "assets/reference-skin/scripts/start-signal-garden-skin.ps1",
+  "assets/reference-skin/scripts/verify-signal-garden-skin.ps1",
+  "assets/reference-skin/scripts/restore-signal-garden-skin.ps1"
 ];
 for (const rel of required) {
   if (!fs.existsSync(path.join(root, rel))) failures.push(`missing required file ${rel}`);

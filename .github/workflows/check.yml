@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   static:
-    name: static validation
+    name: linux static validation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,3 +29,28 @@ jobs:
 
       - name: Run static checks
         run: npm run check
+
+  windows:
+    name: windows mainline validation
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run static checks
+        run: npm run check
+
+      - name: Require PowerShell syntax
+        env:
+          CI_WINDOWS_REQUIRED: "1"
+        run: node scripts/check-powershell-syntax.mjs

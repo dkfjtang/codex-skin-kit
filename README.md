@@ -4,9 +4,14 @@
   <strong>中文</strong> · <a href="./README.en.md">English</a>
 </p>
 
-让 Codex 桌面端更顺眼，也更像你的工作台。
+Windows-first 的 Codex 本地换肤工具，macOS 兼容路径保留但不作为主线。
 
-这是一套可安装、可验证、可恢复的本地皮肤工具；从一张图片开始，给日常编码界面换一种稳定、可回退的视觉状态。
+这是一套可安装、可验证、可恢复的本地皮肤工具；从一套主题开始，给日常编码界面换一种稳定、可回退的视觉状态。
+
+| 平台 | 角色 | 现状 |
+|---|---|---|
+| Windows | 主线 | PowerShell 安装、启动、验证、恢复脚本在推进中 |
+| macOS | 辅助兼容 | 现有 zsh 脚本保留，可继续使用 |
 
 外部主题 / 换肤工具 · 本机 CDP 注入 · 不改官方安装包。首版主题 **Signal Garden** 使用原创抽象信号网格视觉，同时保留原生侧边栏、项目选择器、功能卡、输入框和任务内容。
 
@@ -14,54 +19,64 @@
 
 ## 它能做什么
 
-- 安装一套本地 Codex 皮肤目录到 `~/.codex/skills/codex-skin-kit-signal-garden`
-- 创建 `Signal Garden.app` 和 `Signal Garden - Restore.app` 两个桌面启动器
-- 通过 `127.0.0.1` 本机 CDP 把 CSS 和装饰层注入到官方 Codex 桌面窗口
-- 保留 Codex 原生 DOM 和交互，不做整窗截图覆盖，不替换应用包
-- 安装时会备份并写入用户级 `~/.codex/config.toml` 的外观主题字段；恢复脚本可用 `--restore-base-theme` 回退这部分配置
-- 用 `verify-signal-garden-skin.sh` 检查注入状态，并可导出当前窗口截图
-- 用 `restore-signal-garden-skin.sh` 移除皮肤、停止注入进程，并可卸载桌面启动器
+- Windows 主线可把本地 Codex 皮肤目录安装到 `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden`
+- Windows 主线可创建桌面启动入口，并通过 `127.0.0.1` 本机 CDP 注入 CSS 和装饰层
+- Windows 主线会备份并写入用户级 `~/.codex/config.toml` 的外观主题字段；恢复脚本可用 `-RestoreBaseTheme` 回退这部分配置
+- Windows 主线可用 PowerShell 脚本检查注入状态、导出截图、停止注入并清理桌面入口
+- macOS 辅助路径保留现有 `.sh` 脚本、桌面启动器和恢复逻辑
 - 不读取对话、Cookie、Token 或 API Key，不自动修改模型供应商、Base URL 或代理配置
 
 ## 快速开始
 
-要求：macOS 12 或更高版本、官方 Codex 桌面版、Node.js 18 或更高版本。脚本会查找 Bundle ID 为 `com.openai.codex` 的官方应用，并只绑定本机 `127.0.0.1` 调试端口。
+### Windows 主线
 
-```zsh
+要求：Windows 11、官方 Codex 桌面版、PowerShell 7 或内置 Windows PowerShell、Node.js 18 或更高版本。脚本默认寻找本机 Codex 可执行文件，也可以用 `-AppPath` 或环境变量手动指定。
+
+```powershell
 git clone https://github.com/dkfjtang/codex-skin-kit.git
-cd codex-skin-kit/assets/reference-skin
-/bin/zsh scripts/install-signal-garden-skin.sh
+cd codex-skin-kit\assets\reference-skin
+powershell -ExecutionPolicy Bypass -File scripts\install-signal-garden-skin.ps1
 ```
 
-安装器会把完整主题复制到 `~/.codex/skills/codex-skin-kit-signal-garden`，并在桌面创建：
+安装器会把完整主题复制到 `%USERPROFILE%\.codex\skills\codex-skin-kit-signal-garden`，并在桌面创建：
 
-- `Signal Garden.app`
-- `Signal Garden - Restore.app`
-
-安装器还会备份当前 `~/.codex/config.toml` 到皮肤状态目录，并写入 Codex 外观主题相关字段，让桌面端加载 Signal Garden 的基础主题配置。这个配置变更只限外观字段，不会写入模型、Base URL、代理或 API Key。
+- `Signal Garden.cmd`
+- `Signal Garden - Restore.cmd`
 
 启动主题：
 
-```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/start-signal-garden-skin.sh --restart-existing
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\start-signal-garden-skin.ps1 -RestartExisting
 ```
 
 验证主题并截图：
 
-```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\verify-signal-garden-skin.ps1 -Screenshot "$env:USERPROFILE\Desktop\codex-skin-kit-signal-garden-check.png"
 ```
 
 恢复或卸载：
 
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1
+powershell -ExecutionPolicy Bypass -File scripts\restore-signal-garden-skin.ps1 -RestoreBaseTheme -Uninstall
+```
+
+运行 `restore-signal-garden-skin.ps1` 会停止注入并清理当前皮肤效果；加上 `-RestoreBaseTheme` 时，会把安装前备份的外观主题配置写回 `%USERPROFILE%\.codex\config.toml`。
+
+### macOS 辅助路径
+
+现有 zsh 脚本仍然可用，适合 macOS 环境继续做实机验证和截图补充：
+
 ```zsh
-~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh
+cd codex-skin-kit/assets/reference-skin
+/bin/zsh scripts/install-signal-garden-skin.sh
+~/.codex/skills/codex-skin-kit-signal-garden/scripts/start-signal-garden-skin.sh --restart-existing
+~/.codex/skills/codex-skin-kit-signal-garden/scripts/verify-signal-garden-skin.sh --screenshot "$HOME/Desktop/codex-skin-kit-signal-garden-check.png"
 ~/.codex/skills/codex-skin-kit-signal-garden/scripts/restore-signal-garden-skin.sh --restore-base-theme --uninstall
 ```
 
-只运行 `restore-signal-garden-skin.sh` 会停止注入并清理当前皮肤效果；加上 `--restore-base-theme` 时，会把安装前备份的外观主题配置写回 `~/.codex/config.toml`。
-
-> 首次运行可能需要关闭已打开的 Codex 窗口，或显式使用 `--restart-existing`。不要在未经用户同意时重启正在使用的窗口。
+> Windows 和 macOS 的入口各自保留，主线是 Windows；macOS 只作为辅助兼容与复验路径。
 
 ## 自定义皮肤
 
