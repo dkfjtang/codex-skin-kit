@@ -10,8 +10,7 @@
 </p>
 
 <p align="center">
-  A low-divergence downstream edition based on <a href="https://github.com/Fei-Away/Codex-Dream-Skin"><strong>Fei-Away/Codex-Dream-Skin</strong></a>.<br>
-  This repo focuses on Chinese-first docs, Windows/macOS entry points, support-service placement, and upstream attribution while keeping core skin logic close to upstream.
+  One image, one mood · code with atmosphere
 </p>
 
 <p align="center">
@@ -39,16 +38,9 @@ ttflows 天梯流 is a one-stop AI API service platform that brings together mul
 
 Theme install and API configuration stay separate. Using ttflows is optional and not required for any skin feature; this project does not create accounts, read API keys, or change Base URL, proxy, or model-provider settings.
 
-## Upstream
+## Acknowledgements
 
-Flowdeck is a light downstream edition of [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin). The upstream project provides the main Windows/macOS skin scripts, theme injection, presets, verification, and restore flows.
-
-Maintenance policy:
-
-- Keep core scripts close to upstream
-- Keep local changes mostly in README, support-service copy, attribution files, and small brand assets
-- Prefer syncing future features from upstream instead of building a separate long-term fork
-- Preserve upstream authors, contributors, license, and source information in public files
+This project uses and references open-source work from [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin). Thanks to the upstream author and community contributors. See [`NOTICE.md`](./NOTICE.md) and [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) for license and source details.
 
 ## Tested Featured Presets
 
