@@ -1,6 +1,6 @@
-# Flowdeck Project Notes
+# Codex Skin Kit Project Notes
 
-Flowdeck is an unofficial Codex desktop skin toolkit. It applies external
+Codex Skin Kit is an unofficial Codex desktop skin toolkit. It applies external
 themes through local loopback CDP injection and does not modify the official
 application package, binary, signature, `.app`, `app.asar`, or WindowsApps
 installation.
@@ -16,7 +16,7 @@ installation.
 ## Repository Layout
 
 ```text
-flowdeck/
+codex-skin-kit/
 ├── README.md
 ├── README.en.md
 ├── docs/

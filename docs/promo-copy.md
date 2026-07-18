@@ -1,23 +1,23 @@
-# Flowdeck Promo Copy
+# Codex Skin Kit Promo Copy
 
 ## Short Copy
 
 Codex 也能换皮肤了。
 
-Flowdeck 是一套 Codex 桌面端外部主题工具：不改官方安装包，不改
+Codex Skin Kit 是一套 Codex 桌面端外部主题工具：不改官方安装包，不改
 `app.asar`，通过本机 CDP 注入主题层，让侧栏、卡片、项目选择和输入框继续保持原生可交互。
 
 一张图，一种心情。写代码，也要有氛围感。
 
 项目地址：
-https://github.com/dkfjtang/flowdeck
+https://github.com/dkfjtang/codex-skin-kit
 
 支持服务：
 https://api.ttflows.com/
 
 ## Medium Copy
 
-Flowdeck 给 Codex 桌面端提供外部换肤能力。
+Codex Skin Kit 给 Codex 桌面端提供外部换肤能力。
 
 它不是整窗假截图，也不是修改官方应用包。主题通过本机回环 CDP 注入，背景图铺满窗口，原生侧栏、建议卡、项目选择、输入框和任务内容仍然可点击、可输入、可恢复。
 

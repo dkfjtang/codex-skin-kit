@@ -1,4 +1,4 @@
-# Flowdeck
+# Codex Skin Kit
 
 <p align="center">
   <strong>中文</strong> · <a href="./README.en.md">English</a>

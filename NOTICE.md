@@ -1,6 +1,6 @@
 # Notices
 
-Flowdeck is an unofficial Codex desktop skin project. It uses and references
+Codex Skin Kit is an unofficial Codex desktop skin project. It uses and references
 open-source work from
 [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin).
 It is not affiliated with, endorsed by, or sponsored by OpenAI.
