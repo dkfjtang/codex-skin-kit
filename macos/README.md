@@ -187,20 +187,21 @@ MIT — see `LICENSE`. Additional notices in `NOTICE.md` cover trademarks,
 runtime Node, user-provided artwork, third-party rights, and assets that are not
 licensed under the software license.
 
-## Sponsors
-
-Thanks to **[passion8.cc](https://passion8.cc/register?aff=TuPe)** for sponsoring this project.
+## Support Service
 
 <p align="center">
-  <a href="https://passion8.cc/register?aff=TuPe">
-    <img src="../docs/images/sponsor-passion8.png" alt="Passion8" height="96">
+  <a href="https://api.ttflows.com/">
+    <img src="../assets/brand/ttflows-logo.png" alt="ttflows 天梯流" height="96">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://passion8.cc/register?aff=TuPe"><strong>Passion8｜感谢 passion8.cc 赞助本项目</strong></a><br>
-  AI API 中转站，支持 Codex / Claude Code / Grok 等工具接入。主题与 API 配置互相独立。
+  <a href="https://api.ttflows.com/"><strong>ttflows 天梯流</strong></a><br>
+  一站式 AI API 服务平台，支持 OpenAI API 和 Anthropic API 接口，兼容各类 AI 客户端和开发工具。
 </p>
+
+Theme install and API configuration stay separate. This project does not read
+API keys or change provider settings.
 
 ## What this is not
 

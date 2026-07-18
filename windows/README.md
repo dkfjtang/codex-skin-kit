@@ -157,4 +157,4 @@ Get-AppxPackage -Name OpenAI.Codex
 - 不写入 API Key、Base URL 或模型供应商配置。
 - 恢复脚本只会控制经过包身份、进程路径和会话状态校验的 Codex 进程。
 
-维护者和代理使用的实现约束见 [`SKILL.md`](./SKILL.md)，运行时排错细节见 [`references/runtime-notes.md`](./references/runtime-notes.md)。
+实现约束见 [`SKILL.md`](./SKILL.md)，运行时排错细节见 [`references/runtime-notes.md`](./references/runtime-notes.md)。

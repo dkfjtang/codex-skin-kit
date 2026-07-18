@@ -1,6 +1,7 @@
 # Notices
 
-Flowdeck is an unofficial downstream edition based on
+Flowdeck is an unofficial Codex desktop skin project. It uses and references
+open-source work from
 [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin).
 It is not affiliated with, endorsed by, or sponsored by OpenAI.
 
@@ -16,10 +17,9 @@ trade dress, official application binaries, or user-supplied artwork.
 
 - Upstream project: `Fei-Away/Codex-Dream-Skin`
 - Upstream license: MIT
-- Local fork policy: keep core runtime behavior close to upstream and keep
-  local divergence shallow
 
-## Support-service placement
+## Support service
 
-The `ttflows 天梯流` section in the README is a local support-service placement
-and is independent from skin functionality.
+The `ttflows 天梯流` section in the README is independent from skin
+functionality. Theme installation does not require ttflows and does not change
+API configuration.

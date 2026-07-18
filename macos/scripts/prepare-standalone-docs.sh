@@ -61,8 +61,9 @@ done
 /bin/cp -R "$DOCS_SOURCE/images/gallery" "$DOCS_TARGET/images/"
 /bin/cp -R "$DOCS_SOURCE/images/presets" "$DOCS_TARGET/images/"
 /bin/cp "$DOCS_SOURCE/images/hero-banner-red-white.png" "$DOCS_TARGET/images/"
-if [ -f "$DOCS_SOURCE/images/sponsor-passion8.png" ]; then
-  /bin/cp "$DOCS_SOURCE/images/sponsor-passion8.png" "$DOCS_TARGET/images/"
+if [ -f "$DOCS_SOURCE/../assets/brand/ttflows-logo.png" ]; then
+  /bin/mkdir -p "$DOCS_TARGET/images/brand"
+  /bin/cp "$DOCS_SOURCE/../assets/brand/ttflows-logo.png" "$DOCS_TARGET/images/brand/"
 fi
 
 # Prompt guides are authored from the repository root. The macOS tree becomes
